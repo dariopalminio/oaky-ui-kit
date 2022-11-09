@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { ThemeProvider } from "styled-components"
 import Button from '../common/botton/botton';
 
 function Demo() {
