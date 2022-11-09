@@ -1,0 +1,10 @@
+/*
+* {
+  outline: 1px solid red;
+}
+*/
+.unstyle {
+    all: unset;
+  }
+
+  

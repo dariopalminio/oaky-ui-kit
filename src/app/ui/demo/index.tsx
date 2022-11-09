@@ -1,4 +1,7 @@
-import Button from '../common/botton/botton';
+
+import { Button } from '../button';
+import '../style/normalize.css'
+import './demo.css'
 
 function Demo() {
 
