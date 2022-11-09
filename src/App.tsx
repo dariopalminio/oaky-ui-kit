@@ -4,10 +4,6 @@ import Demo from './app/ui/demo';
 
 function App() {
 
-  const handleClickOpen = () => {
-    alert("OK!");
-  };
-
   return (
     <div className="App">
       <ThemeProvider theme={Themes.primary}>
