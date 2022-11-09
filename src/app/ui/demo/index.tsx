@@ -1,22 +1,18 @@
 
-import { Button } from '../button';
+import ButtonDemo from '../button/demo';
 import '../style/normalize.css'
 import './demo.css'
 
 function Demo() {
 
-    const handleClickOpen = () => {
-        alert("OK!");
-    };
-
     return (
 
         <div>
-            <h1>Vite + React</h1>
+            <h1>it-simple-react-ui</h1>
 
-            <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }}>
-                Click me
-            </Button>
+            <p>UI Kit with react, typescript and CSS</p>
+            
+            <ButtonDemo />
 
         </div>
 

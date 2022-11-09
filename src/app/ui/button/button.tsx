@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+//Custom props for attaching additional props to Styled-components
+interface ButtonProps {
+    readonly styleType: string;
+};
+
 //Styled-components
-const GradientButton = styled.button`
-        color: ${props => props.theme.button.color};
-        background: ${props => props.theme.button.background};
-        box-shadow: ${props => props.theme.button.boxShadow};
+const GradientButton = styled.button<ButtonProps>`
+        color: ${props => props.theme[props.styleType].button.color};
+        background: ${props => props.theme[props.styleType].button.background};
+        box-shadow: ${props => props.theme[props.styleType].button.boxShadow};
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         overflow: hidden;
         border: 0px;
@@ -20,10 +25,10 @@ const GradientButton = styled.button`
             transition: transform 0.5s ease;
           }
         &:hover{
-            color: ${props => props.theme.button.hoverColor};
+            color: ${props => props.theme[props.styleType].button.hoverColor};
             transform: translate(0, 0);
-            background: ${props => props.theme.button.hoverBackground};
-            box-shadow: ${props => props.theme.button.hoverBoxShadow};
+            background: ${props => props.theme[props.styleType].button.hoverBackground};
+            box-shadow: ${props => props.theme[props.styleType].button.hoverBoxShadow};
             &:after {
                 transform: rotate(150deg);
               }
@@ -52,19 +57,20 @@ interface Props {
     onClick?: () => void;
     type?: "button" | "submit" | "reset" | undefined;
     style?: any;
-    disabled?: boolean
+    disabled?: boolean,
+    styleType?: string
 }
 
 /**
  * Customized button
  * Stateless components and controlled component
  */
- export const Button: React.FC<Props> = ({ children, onClick, type, style, disabled }) => {
+ export const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
 
     return (
         <>
             {disabled && (
-                <GradientButtonDisabled
+                <GradientButtonDisabled 
                     disabled
                 >
                     {children}
@@ -72,7 +78,7 @@ interface Props {
             )}
 
             {(!disabled && type) && (
-                <GradientButton
+                <GradientButton styleType={styleType ? styleType : "default"}
                     onClick={onClick}
                     type={type}
                     {...(style && 
@@ -84,7 +90,7 @@ interface Props {
             )}
 
             {(!disabled && !type) && (
-                <GradientButton
+                <GradientButton styleType={styleType ? styleType : "default"}
                     onClick={onClick}
                     style={style ? style : {}}
                 >

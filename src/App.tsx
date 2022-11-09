@@ -4,9 +4,10 @@ import Themes from "./app/ui/style/theme/themes";
 
 function App() {
 
+
   return (
     <div className="App">
-      <ThemeProvider theme={Themes.primary}>
+      <ThemeProvider theme={Themes}>
 
         <Demo />
 

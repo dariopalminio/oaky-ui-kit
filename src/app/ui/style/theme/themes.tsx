@@ -1,7 +1,71 @@
-import PrimaryTheme from "./theme-primary";
+const DefaultTheme = {
+  layout: {
+    sidebarWidth: 240,
+    headerHeight: 50,
+    headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
+  },
+  button: {
+    color: "white",
+    background: "#98CDFD",
+    boxShadow: "0 0 0 0 rgba(39, 200, 255, 0.5), 0 0 0 0 rgba(145, 64, 248, 0.5)",
+    hoverBackground: "linear-gradient(45deg,  #A5C8FE 30%, #4890FF 90%)",
+    hoverColor: "rgb(255, 255, 255)",
+    hoverBoxShadow: "box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 24px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
+  },
+  paper: {
+    border: "1px solid #d7d7d7",
+    boxShadow: "0px 5px 20px #1687d933",
+  }
+
+};
+
+const PrimaryTheme = {
+  layout: DefaultTheme.layout,
+  button: {
+    color: "white",
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    boxShadow: "0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5)",
+    hoverBackground: "linear-gradient(45deg,  #FF8E53 30%, #FE6B8B 90%)",
+    hoverColor: "rgb(255, 255, 255)",
+    hoverBoxShadow: "10px -10px 25px 0 rgba(16, 226, 256, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7)",
+  },
+  paper: DefaultTheme.paper
+
+};
+
+const SecondaryTheme = {
+  layout: DefaultTheme.layout,
+  button: {
+    color: "white",
+    background: "black",
+    boxShadow: "0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5)",
+    hoverBackground: "linear-gradient(45deg,  #4D5964 30%, #4D5964 90%)",
+    hoverColor: "rgb(255, 255, 255)",
+    hoverBoxShadow: "10px -10px 25px 0 rgba(16, 226, 256, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7)",
+  },
+  paper: DefaultTheme.paper
+
+};
+
+const DangerTheme = {
+  layout: DefaultTheme.layout,
+  button: {
+    color: "white",
+    background: "#F64545",
+    boxShadow: "0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5)",
+    hoverBackground: "linear-gradient(45deg,  #FA3867 30%, #FA3867 90%)",
+    hoverColor: "rgb(255, 255, 255)",
+    hoverBoxShadow: "10px -10px 25px 0 rgba(16, 226, 256, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7)",
+  },
+  paper: DefaultTheme.paper
+
+}
 
 const Themes = {
-    primary: PrimaryTheme
-  }
+    default: DefaultTheme, //Default style.
+    primary: PrimaryTheme, //Indicates the primary action.
+    secondary: SecondaryTheme, //Indicates an important action.
+    danger: DangerTheme //Indicates a dangerous or negative action.
+  };
 
 export default Themes;
