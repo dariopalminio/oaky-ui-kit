@@ -1,5 +1,6 @@
 
 import AlertsDemo from '../ui-kit/alert/demo';
+import ButtonQuantityDemo from '../ui-kit/button-quantity/demo';
 import ButtonDemo from '../ui-kit/button/demo';
 import IconButtonDemo from '../ui-kit/icon-button/demo';
 import ProgressDemo from '../ui-kit/progress/demo';
@@ -19,6 +20,8 @@ function Demo() {
             <AlertsDemo/>
 
             <ButtonDemo />
+
+            <ButtonQuantityDemo />
 
             <IconButtonDemo />
 

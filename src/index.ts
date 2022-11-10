@@ -1,8 +1,8 @@
 export * from './demo'
 export * from './ui-kit/alert'
 export * from './ui-kit/button'
+export * from './ui-kit/button-quantity'
 export * from './ui-kit/icon-button'
 export * from './ui-kit/progress'
 export * from './ui-kit/text-field'
 export * from './ui-kit/theme'
-

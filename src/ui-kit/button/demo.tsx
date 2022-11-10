@@ -1,4 +1,5 @@
 
+import { CenteringContainer } from '../elements/centering-container';
 import { Button } from './button'
 import PreviousNextButtons from './previous-next-buttons';
 
@@ -20,7 +21,7 @@ function ButtonDemo() {
 
         <div>
             <h2>Button</h2>
-
+            <CenteringContainer>
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"disabled"}>
             disabled
             </Button>
@@ -36,7 +37,7 @@ function ButtonDemo() {
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"danger"}>
             danger
             </Button>
-
+            </CenteringContainer>
             <h2>PreviousNextButtons</h2>
 
             <PreviousNextButtons labelPrevious={'Previous'} labelNext={'Next'}
