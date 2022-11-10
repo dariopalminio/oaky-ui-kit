@@ -4,6 +4,7 @@ import ButtonQuantityDemo from '../ui-kit/button-quantity/demo';
 import ButtonDemo from '../ui-kit/button/demo';
 import ModalDialogDemo from '../ui-kit/dialog/demo';
 import IconButtonDemo from '../ui-kit/icon-button/demo';
+import ImgCarouselDemo from '../ui-kit/img-carousel/demo';
 import ProgressDemo from '../ui-kit/progress/demo';
 import '../ui-kit/style/normalize.css'
 import TextFieldDemo from '../ui-kit/text-field/demo';
@@ -25,6 +26,8 @@ function Demo() {
             <ButtonQuantityDemo />
 
             <IconButtonDemo />
+
+            <ImgCarouselDemo />
 
             <ModalDialogDemo/>
 
