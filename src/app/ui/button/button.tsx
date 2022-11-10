@@ -78,7 +78,7 @@ interface Props {
             )}
 
             {(!disabled && type) && (
-                <GradientButton styleType={styleType ? styleType : "default"}
+                <GradientButton styleType={styleType ? styleType : "primary"}
                     onClick={onClick}
                     type={type}
                     {...(style && 
