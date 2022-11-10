@@ -28,7 +28,7 @@ function ButtonQuantityDemo() {
     return (
 
         <div>
-            <h2>Button</h2>
+            <h2>ButtonQuantity</h2>
             <CenteringContainer>
                 <ButtonQuantity
                     value={quantity1}
