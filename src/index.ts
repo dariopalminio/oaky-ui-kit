@@ -1,1 +1,1 @@
-export * from './app/ui/button'
+export * from './app/ui-kit/button'

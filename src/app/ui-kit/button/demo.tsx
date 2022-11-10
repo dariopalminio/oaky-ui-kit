@@ -1,5 +1,5 @@
 
-import { Button } from './button';
+import { Button } from './button'
 
 function ButtonDemo() {
 
@@ -13,19 +13,19 @@ function ButtonDemo() {
             <h1>Button</h1>
 
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"disabled"}>
-                Click me
+            disabled
             </Button>
             &nbsp;&nbsp;
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"primary"}>
-                Click me
+            primary
             </Button>
             &nbsp;&nbsp;
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"secondary"}>
-                Click me
+            secondary
             </Button>
             &nbsp;&nbsp;
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"danger"}>
-                Click me
+            danger
             </Button>
 
         </div>
