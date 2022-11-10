@@ -1,4 +1,5 @@
 
+import AlertsDemo from '../ui-kit/alert/demo';
 import ButtonDemo from '../ui-kit/button/demo';
 import IconButtonDemo from '../ui-kit/icon-button/demo';
 import '../ui-kit/style/normalize.css'
@@ -16,6 +17,8 @@ function Demo() {
             <ButtonDemo />
 
             <IconButtonDemo />
+
+            <AlertsDemo/>
         </div>
 
     )
