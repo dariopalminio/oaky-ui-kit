@@ -32,7 +32,7 @@ function ButtonQuantityDemo() {
             <CenteringContainer>
                 <ButtonQuantity
                     value={quantity1}
-                    styleType={"disabled"}
+                    disabled={true}
                     onChange={(newQuantityValue: number) => handlerNewQuantityValue1(newQuantityValue)} />
                 &nbsp;&nbsp;
                 <ButtonQuantity

@@ -57,13 +57,14 @@ interface Props {
     value: number;
     onChange: (newQuantityValue: number) => void;
     styleType?: string;
+    disabled?: boolean;
 }
 
 /**
  * Customized button for quantity number selection
  * Stateless components and controlled component
  */
-export const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType }) => {
+export const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled }) => {
 
     const handlerQtyminus = () => {
         let newValue: number = value;
@@ -76,13 +77,21 @@ export const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType }) 
         onChange(newValue);
     };
 
+    const getStyleType = () => {
+       const dis: boolean = disabled? disabled : false;
+       if (dis === true) return "disabled";
+       return styleType ? styleType : "primary";
+    }
+
     return (
         <QtyContainer>
             <InputQtyMinus
                 type='button'
                 value='-'
                 onClick={() => handlerQtyminus()}
-                styleType={styleType ? styleType : "primary"} />
+                styleType={getStyleType()} 
+                disabled={disabled? disabled : false}
+                />
             <InputQty
                 type='text'
                 name='quantity'
@@ -92,7 +101,8 @@ export const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType }) 
                 type='button'
                 value='+'
                 onClick={() => handlerQtyplus()}
-                styleType={styleType ? styleType : "primary"} />
+                styleType={getStyleType()} 
+                disabled={disabled? disabled : false}/>
         </QtyContainer>
     );
 };
