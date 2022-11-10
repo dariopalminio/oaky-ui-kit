@@ -5,7 +5,7 @@ export * from './ui-kit/button-quantity'
 export * from './ui-kit/elements'
 export * from './ui-kit/icon-button'
 export * from './ui-kit/img-carousel'
+export * from './ui-kit/link'
 export * from './ui-kit/progress'
 export * from './ui-kit/text-field'
 export * from './ui-kit/theme'
-
