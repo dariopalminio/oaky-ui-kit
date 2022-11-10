@@ -2,6 +2,7 @@
 import AlertsDemo from '../ui-kit/alert/demo';
 import ButtonQuantityDemo from '../ui-kit/button-quantity/demo';
 import ButtonDemo from '../ui-kit/button/demo';
+import ModalDialogDemo from '../ui-kit/dialog/demo';
 import IconButtonDemo from '../ui-kit/icon-button/demo';
 import ProgressDemo from '../ui-kit/progress/demo';
 import '../ui-kit/style/normalize.css'
@@ -24,6 +25,8 @@ function Demo() {
             <ButtonQuantityDemo />
 
             <IconButtonDemo />
+
+            <ModalDialogDemo/>
 
             <ProgressDemo/>
 

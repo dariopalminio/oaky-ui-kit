@@ -3,7 +3,7 @@ import { useState } from 'react'
  * use AlertPopup 
  * Custom hook
  */
-export default function useAlertPopup() {
+export function useAlertPopup() {
     const [show, setShow] = useState(false)
 
     const toggle = () => {
@@ -16,3 +16,5 @@ export default function useAlertPopup() {
         toggle
     }
 }
+
+export default useAlertPopup;
