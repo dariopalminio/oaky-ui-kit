@@ -30,19 +30,31 @@ interface Props {
 }
 
 /**
+ *       {!isSuccess && (
+        <LoginForm onSubmit={(email: string, password: string) => handleLoginSubmit(email, password)}
+          style={{ width: "300px", margin: "34px auto auto auto" }} />
+      )}
  * Customized IconButton
  * Stateless components and controlled component
  */
-const IconButton: React.FC<Props> = ({ children, onClick, hide, style }) => {
+export const IconButton: React.FC<Props> = ({ children, onClick, hide, style }) => {
 
-    return (<CircularIconButton
-                    onClick={(e)=>onClick(e)}
-                    {...(style && 
-                        (style= {style})
-                      )}
-                >
-                    {children}
-                </CircularIconButton>
+    const shows = (): boolean => {
+        return hide? false : true;
+    }
+
+    return (<>
+        {shows() && (
+            <CircularIconButton
+                onClick={(e) => onClick(e)}
+                {...(style &&
+                    (style = { style })
+                )}
+            >
+                {children}
+            </CircularIconButton>
+        )}
+    </>
     );
 };
 
