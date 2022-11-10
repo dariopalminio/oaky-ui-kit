@@ -1,5 +1,6 @@
 
 import { Button } from './button'
+import PreviousNextButtons from './previous-next-buttons';
 
 function ButtonDemo() {
 
@@ -7,6 +8,14 @@ function ButtonDemo() {
         alert("OK!");
     };
 
+    const handlePrevious = () => {
+        //previous
+    };
+
+    const handleNext = (): void => {
+        //next
+    };
+    
     return (
 
         <div>
@@ -27,6 +36,11 @@ function ButtonDemo() {
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"danger"}>
             danger
             </Button>
+
+            <h2>PreviousNextButtons</h2>
+
+            <PreviousNextButtons labelPrevious={'Previous'} labelNext={'Next'}
+                handlePrevious={() => handlePrevious()} handleNext={() => handleNext()} />
 
         </div>
 
