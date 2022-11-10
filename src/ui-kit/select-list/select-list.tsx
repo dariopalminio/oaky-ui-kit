@@ -1,5 +1,5 @@
 import React from "react";
-import { RiDeleteBin7Fill} from "react-icons/ri";
+import { RiDeleteBin7Fill } from "react-icons/ri";
 import styled from "styled-components";
 
 const SelectListGroup = styled.div`
@@ -66,13 +66,15 @@ interface Props {
     onClickDelete: (item: string, index: number) => void;
     style?: any;
     list: string[];
+    currentSelected?: number;
+    withDelete?: boolean;
 }
 
 /**
  * Select List components is used for collecting user provided information from a list of options.
  * Stateless components, extensible Style and controlled component
  */
-export const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDelete, style }) => {
+export const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDelete, currentSelected, withDelete, style }) => {
 
 
     const selectItem = (item: string, index: number) => {
@@ -83,20 +85,34 @@ export const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, on
         onClickDelete(item, index);
     }
 
+    const isSelected = (index: number) => {
+        return currentSelected === index;
+    }
+
+    const getBackgroundIfSelected = (index: number) => {
+        if (isSelected(index)) {
+            return { background: "#F1F1F1" };
+        }
+        return {};
+    }
+
     return (
         <SelectListGroup>
             {label && <LabelSelectList>{label}</LabelSelectList>}
             <UlSelectList>
                 {list.map((item: string, index: number) => {
                     return (
-                        <li key={id+index.toString()}
+                        <li key={id + index.toString()}
+                            style={getBackgroundIfSelected(index)}
                             onClick={() => selectItem(item, index)}>{item}
+                            {withDelete && (
                             <SelectListDelete
-                                key={'SelectListDelete'+id+index.toString()}
+                                key={'SelectListDelete' + id + index.toString()}
                                 aria-hidden="true"
                                 onClick={() => deleteItem(item, index)}>
-                                    <RiDeleteBin7Fill size={20}/>
-                                </SelectListDelete>
+                                <RiDeleteBin7Fill size={20} />
+                            </SelectListDelete>
+                            )}
                         </li>
                     )
                 }

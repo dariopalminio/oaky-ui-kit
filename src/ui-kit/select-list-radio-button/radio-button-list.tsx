@@ -1,7 +1,55 @@
 import React from "react";
 import { RiDeleteBin7Fill } from "react-icons/ri";
 import styled from "styled-components";
-import "./radio-button-list.css";
+//import "./radio-button-list.css";
+
+//Custom props for attaching additional props to Styled-components
+interface RadioButtonProps {
+    readonly styleType: string;
+};
+
+const StylesRadioButton = styled.div<RadioButtonProps>`
+.input_radio_button[type="radio"]{
+    display: none;
+}
+
+.radio_item_label{
+    display: block;
+    cursor: pointer;
+    font-weight: 200;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.span_radio {
+    display: inline-flex;
+    align-items: left;
+    padding: 2px 2px 2px 2px;
+    border-radius: 31px;
+    transition: .25s ease;
+}
+
+.span_radio:hover,
+.input_radio_button[type="radio"]:checked + span{
+    background-color: #E9F1F7;
+}
+
+.span_radio:before{
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: .25s ease;
+    box-shadow:  inset 0 0 0 2px grey;
+}
+
+.input_radio_button[type="radio"]:checked + span:before{
+    background: ${props => props.theme[props.styleType].button.background};
+}
+`
 
 const SelectListGroup = styled.div`
     color: #333;
@@ -35,13 +83,14 @@ interface Props {
     currentSelected?: number;
     style?: any;
     list: string[];
+    styleType?: string;
 }
 
 /**
  * Select List with Radio Buttons component is used for collecting one data user provided information from a list of options.
  * Stateless components, extensible Style and controlled component
  */
-export const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, currentSelected=-1, style }) => {
+export const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, currentSelected=-1, styleType, style }) => {
 
 
     const selectItem = (item: string, index: number) => {
@@ -59,6 +108,7 @@ export const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelec
     }
 
     return (
+        <StylesRadioButton styleType={styleType ? styleType : "secondary"}>
         <SelectListGroup>
             {label && <LabelSelectList style={!thereIsSomeSelected()? {color: "#cc0033"} : {}}>{label}</LabelSelectList>}
             <RadioButtonsWrapper>
@@ -76,6 +126,7 @@ export const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelec
                 )}
             </RadioButtonsWrapper>
         </SelectListGroup>
+        </StylesRadioButton>
     );
 };
 
