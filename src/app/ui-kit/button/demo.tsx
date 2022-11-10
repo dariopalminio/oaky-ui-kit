@@ -10,7 +10,7 @@ function ButtonDemo() {
     return (
 
         <div>
-            <h1>Button</h1>
+            <h2>Button</h2>
 
             <Button type="button" onClick={handleClickOpen} style={{ marginTop: "15px" }} styleType={"disabled"}>
             disabled

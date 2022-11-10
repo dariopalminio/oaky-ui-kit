@@ -11,7 +11,7 @@ function IconButtonDemo() {
     return (
 
         <div>
-            <h1>IconButton</h1>
+            <h2>IconButton</h2>
 
             <IconButton
             onClick={() => handleClick()}>
