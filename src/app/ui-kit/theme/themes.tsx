@@ -60,7 +60,7 @@ const DangerTheme = {
 
 }
 
-const Themes = {
+export const Themes = {
     disabled: DisableTheme, //disable.
     primary: PrimaryTheme, //Indicates the primary action.
     secondary: SecondaryTheme, //Indicates an important action.

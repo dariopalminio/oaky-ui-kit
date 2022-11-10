@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components"
 import Demo from './app/demo';
-import Themes from "./app/ui-kit/style/theme/themes";
+import Themes from "./app/ui-kit/theme/themes";
+
 
 function App() {
 
