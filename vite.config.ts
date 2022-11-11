@@ -14,7 +14,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'lib/index.ts'),
-            name: 'ItSimpleReactUI',
+            name: 'DaroUIKit',
             formats: ['es', 'umd'],
             fileName: (format) => `daro-ui-kit.${format}.js`,
         },
