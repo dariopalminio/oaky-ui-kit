@@ -1,6 +1,6 @@
 # daro-ui-kit
 
-UI Kit with react, typescript, styled-components and CSS
+UI Kit with react, typescript, styled-components and CSS. This is a React Component Library generated with Vite.
 
 ## Installation
 
@@ -33,5 +33,9 @@ Go to the libconsumer (daro-ui-kit-demo) directory and run: npm link daro-ui-kit
 - https://github.com/bx-design/react-grid
 - https://github.com/bx-design/react-icons
 - https://github.com/bx-design/react-ui
+
+React Component Library with Vite and Deploy in NPM:
+- https://articles.wesionary.team/react-component-library-with-vite-and-deploy-in-npm-579c2880d6ff
+- https://github.com/bigyanpoudel/react-vite-library
 
 
