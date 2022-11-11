@@ -10,16 +10,22 @@ $ npm install
 
 ## Build the lib
 
+Run build with vite using npm:
 ```bash
 # build
 $ npm run build
+```
+
+This generate dist folder containing the build result.
 
 ## Lib manual and local installation with Link
+
 Install lib in a folder parallel to your project folder.
 ```bash
 .
-└── daro-ui-kit # lib project
-├── daro-ui-kit-demo #consumer app 
+└── daro-ui-kit # lib project containing dist folder or only dist folder
+├── daro-ui-kit-demo #consumer app (or other app)
+
 ```
 Go daro-ui-kit/dist folder and use: npm link
 Go to the libconsumer (daro-ui-kit-demo) directory and run: npm link daro-ui-kit
