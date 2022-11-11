@@ -1,4 +1,4 @@
-import { MenuItemType } from "./menu-item.type";
+import { MenuItemType } from "./types";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";

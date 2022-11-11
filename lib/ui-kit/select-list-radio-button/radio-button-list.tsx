@@ -1,7 +1,5 @@
 import React from "react";
-import { RiDeleteBin7Fill } from "react-icons/ri";
 import styled from "styled-components";
-//import "./radio-button-list.css";
 
 //Custom props for attaching additional props to Styled-components
 interface RadioButtonProps {

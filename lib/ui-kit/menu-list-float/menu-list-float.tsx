@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { MenuItemType } from "../menu-list/menu-item.type";
+import { MenuItemType } from "../menu-list/types";
 import styled from "styled-components";
 
 const StylesMenuListFloat = styled.div`

@@ -1,4 +1,4 @@
-import { MenuItemType } from "../menu-list/menu-item.type";
+import { MenuItemType } from "../menu-list/types";
 import MenuIconButtonItem from "./menu-icon-button-item";
 
 interface Props {

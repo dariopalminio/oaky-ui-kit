@@ -1,4 +1,4 @@
-export * from './demo'
+
 export * from './ui-kit/alert'
 export * from './ui-kit/button'
 export * from './ui-kit/button-quantity'
@@ -19,3 +19,4 @@ export * from './ui-kit/select-opts'
 export * from './ui-kit/table'
 export * from './ui-kit/text-field'
 export * from './ui-kit/theme'
+export * from './ui-kit/dialog'

@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import { MenuItemType } from "../menu-list/menu-item.type";
+import { MenuItemType } from "../menu-list/types";
 import styled from "styled-components";
 import IconButton from "../icon-button/icon-button";
 import React from "react";

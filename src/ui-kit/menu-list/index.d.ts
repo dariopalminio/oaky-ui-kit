@@ -1,1 +1,0 @@
-export { MenuItemType } from './menu-item.type'

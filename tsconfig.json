@@ -1,11 +1,11 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,8 +14,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "rootDir": "lib",
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true ,
+    "declarationMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "react-vite-library": [ "lib/index.ts" ]
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "lib/index.d.ts"
+    ]
   },
-  "include": ["src"],
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "build/**/*", "dist", "../it-simple-react-ui-demo/src/main.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
