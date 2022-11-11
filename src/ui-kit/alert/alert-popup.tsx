@@ -82,7 +82,7 @@ interface Props {
  * Customized AlertPopup
  * Stateless components
  */
-export const AlertPopup: React.FC<Props> = ({ severity, children, toggle, style }) => {
+const AlertPopup: React.FC<Props> = ({ severity, children, toggle, style }) => {
 
     const getBackgroundBySeverity = () => {
         switch (severity) {

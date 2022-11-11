@@ -3,7 +3,7 @@ import { useState } from 'react';
 /**
  *  useModalDialog Custom hook
  */
-export const useModalDialog = () => {
+const useModalDialog = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   function toggle() {

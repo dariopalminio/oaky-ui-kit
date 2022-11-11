@@ -1,1 +1,1 @@
-export { ButtonQuantity } from './button-quantity'
+export { default as ButtonQuantity } from './button-quantity'

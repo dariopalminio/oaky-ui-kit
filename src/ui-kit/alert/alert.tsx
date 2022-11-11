@@ -47,7 +47,7 @@ interface Props {
  * Customized alert
  * Stateless components
  */
- export const Alert: React.FC<Props> = ({ severity, children }) => {
+const Alert: React.FC<Props> = ({ severity, children }) => {
 
     const getId = () => {
         return severity ? 'alert-box-' + severity : 'alert-box-';

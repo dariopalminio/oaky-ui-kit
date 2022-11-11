@@ -33,7 +33,7 @@ interface Props {
  * Links Stepper or category selector
  * Stateless components and controlled component
  */
-export const LinksStepper: React.FC<Props> = ({ list, currentIndex, onClick }) => {
+const LinksStepper: React.FC<Props> = ({ list, currentIndex, onClick }) => {
 
     const getLinkColor = (el: any) => {
         if (list && (el.name === list[currentIndex]?.name)) return 'red';

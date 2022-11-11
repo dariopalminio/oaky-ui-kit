@@ -1,7 +1,7 @@
 
-import { CenteringContainer } from '../elements/centering-container';
-import { Button } from './button'
-import PreviousNextButtons from './previous-next-buttons';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import Button from '../ui-kit/button/button'
+import PreviousNextButtons from '../ui-kit/button/previous-next-buttons';
 
 function ButtonDemo() {
 

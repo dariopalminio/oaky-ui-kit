@@ -1,4 +1,4 @@
 
 
-export { MenuIconButtonItem } from './menu-icon-button-item'
-export { MenuIconButton } from './menu-icon-button'
+export { default as MenuIconButtonItem } from './menu-icon-button-item'
+export { default as MenuIconButton } from './menu-icon-button'

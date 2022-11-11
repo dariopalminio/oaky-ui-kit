@@ -85,7 +85,7 @@ export const exampleStepList = [
  * Bullets Stepper
  * Stateless components and controlled component
  */
-export const BulletsStepper: React.FC<Props> = ({ list, onClick }) => {
+const BulletsStepper: React.FC<Props> = ({ list, onClick }) => {
 
     const isNotFirst = (index: number) => {
         return (list && ((list.length > 1) && (index > 0)));

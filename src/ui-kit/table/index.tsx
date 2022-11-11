@@ -1,1 +1,1 @@
-export { SingleAttrTable } from './single-att-table'
+export { default as SingleAttrTable } from './single-att-table'

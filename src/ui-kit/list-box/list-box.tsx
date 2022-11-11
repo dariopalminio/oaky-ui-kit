@@ -100,7 +100,7 @@ interface Props {
  * List Boxcomponents is used for collecting user provided information from a dropdown list of options.
  * Stateless components and controlled component
  */
-export const ListBox: React.FC<Props> = ({ id, label, onChange, style, value, options }) => {
+const ListBox: React.FC<Props> = ({ id, label, onChange, style, value, options }) => {
 
     const isChecked = (index: number): boolean => {
         if (!options || !value) return false;

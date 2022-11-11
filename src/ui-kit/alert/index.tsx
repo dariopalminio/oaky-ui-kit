@@ -1,3 +1,3 @@
-export { Alert } from './alert'
-export { AlertPopup } from './alert-popup'
-export { useAlertPopup } from './alert-popup-hook'
+export { default as Alert} from "./alert";
+export { default as AlertPopup } from './alert-popup'
+export { default as useAlertPopup } from './alert-popup-hook'

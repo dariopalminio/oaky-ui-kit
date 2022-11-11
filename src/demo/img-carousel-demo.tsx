@@ -1,8 +1,8 @@
 
-import { CenteringContainer } from '../elements/centering-container';
-import ImgCarousel from './img-carousel';
-import Image1 from './../../assets/aurora-1197753_960_720.jpg';
-import Image2 from './../../assets/sunset-1373171__340.jpg';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import ImgCarousel from '../ui-kit/img-carousel/img-carousel';
+import Image1 from './assets/aurora-1197753_960_720.jpg';
+import Image2 from './assets/sunset-1373171__340.jpg';
 
 function ImgCarouselDemo() {
 

@@ -1,3 +1,3 @@
-export { BulletsStepper } from './bullets-stepper'
-export { LinksStepper } from './links-stepper'
-export { TextsStepper } from './texts-stepers'
+export { default as BulletsStepper } from './bullets-stepper'
+export { default as LinksStepper } from './links-stepper'
+export { default as TextsStepper } from './texts-stepers'

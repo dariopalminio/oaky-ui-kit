@@ -21,7 +21,7 @@ interface Props {
  * Previous and Next buttons
  * Stateless components and controlled component
  */
- export const PreviousNextButtons: React.FC<Props> = ({ labelPrevious, labelNext, handlePrevious, handleNext }) => {
+const PreviousNextButtons: React.FC<Props> = ({ labelPrevious, labelNext, handlePrevious, handleNext }) => {
 
     return (
         <ButtonsWrapper>

@@ -1,1 +1,1 @@
-export { SelectList } from './select-list'
+export { default as SelectList } from './select-list'

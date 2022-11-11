@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { CenteringContainer } from '../elements/centering-container';
-import SelectList from './select-list';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import SelectList from '../ui-kit/select-list/select-list';
 
 
 function SelectListDemo() {

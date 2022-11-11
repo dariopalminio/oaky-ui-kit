@@ -1,2 +1,2 @@
-export { Button } from './button'
-export { PreviousNextButtons } from './previous-next-buttons'
+export { default as Button } from './button'
+export { default as PreviousNextButtons } from './previous-next-buttons'

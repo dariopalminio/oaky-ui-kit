@@ -64,7 +64,7 @@ interface Props {
  * Customized button for quantity number selection
  * Stateless components and controlled component
  */
-export const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled }) => {
+const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled }) => {
 
     const handlerQtyminus = () => {
         let newValue: number = value;

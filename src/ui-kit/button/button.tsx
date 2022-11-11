@@ -65,7 +65,7 @@ interface Props {
  * Customized button
  * Stateless components and controlled component
  */
- export const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
+const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
 
     return (
         <>

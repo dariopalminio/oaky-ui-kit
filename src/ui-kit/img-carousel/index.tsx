@@ -1,1 +1,1 @@
-export { ImgCarousel } from './img-carousel'
+export { default as ImgCarousel } from './img-carousel'

@@ -58,7 +58,7 @@ const {isOpen, toggle} = useModalDialog();
 </ModalDialog>
 
  */
-export const ModalDialog: React.FC<Props> = ({ isOpen, onClose, children, style }) => {
+const ModalDialog: React.FC<Props> = ({ isOpen, onClose, children, style }) => {
 
     return isOpen ? ReactDOM.createPortal(
         <React.Fragment>

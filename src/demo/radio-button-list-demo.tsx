@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
-import { CenteringContainer } from '../elements/centering-container';
-import RadioButtonList from './radio-button-list';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import RadioButtonList from '../ui-kit/select-list-radio-button/radio-button-list';
 
 
 

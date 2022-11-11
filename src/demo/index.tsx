@@ -1,16 +1,15 @@
 
-import AlertsDemo from '../ui-kit/alert/demo';
-import ButtonQuantityDemo from '../ui-kit/button-quantity/demo';
-import ButtonDemo from '../ui-kit/button/demo';
-import ModalDialogDemo from '../ui-kit/dialog/demo';
-import IconButtonDemo from '../ui-kit/icon-button/demo';
-import ImgCarouselDemo from '../ui-kit/img-carousel/demo';
-import ProgressDemo from '../ui-kit/progress/demo';
-import RadioButtonListDemo from '../ui-kit/select-list-radio-button/demo';
-import SelectListDemo from '../ui-kit/select-list/demo';
-import SelectOptsDemo from '../ui-kit/select-opts/demo';
-import '../ui-kit/style/normalize.css'
-import TextFieldDemo from '../ui-kit/text-field/demo';
+import AlertsDemo from './alert-demo';
+import ButtonQuantityDemo from './button-quantity-demo';
+import ButtonDemo from './button-demo';
+import ModalDialogDemo from './modal-dialog-demo';
+import IconButtonDemo from './icon-button-demo';
+import ImgCarouselDemo from './img-carousel-demo';
+import ProgressDemo from './circular-progress-demo';
+import RadioButtonListDemo from './radio-button-list-demo';
+import SelectListDemo from './select-list-demo';
+import SelectOptsDemo from './select-opts-demo';
+import TextFieldDemo from './text-field-demo';
 import './demo.css'
 
 function Demo() {

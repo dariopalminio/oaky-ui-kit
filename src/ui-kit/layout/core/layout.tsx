@@ -83,7 +83,7 @@ interface Props {
  * 
  * Patterns: Render Prop, Presentation Component and Context Provider
  */
- export const Layout: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
+const Layout: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
         toggleSidebar } = useContext(LayoutContext) as ILayoutContext;

@@ -1,4 +1,4 @@
-import CircularProgress from "./circular-progress";
+import CircularProgress from "../ui-kit/progress/circular-progress";
 
 function ProgressDemo() {
 

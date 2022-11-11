@@ -23,7 +23,7 @@ interface Props {
 /**
  * Menu Item for Menu Icon-Button
  */
-export const MenuIconButtonItem: React.FC<Props> = ({ permission, item, onClick, style }) => {
+const MenuIconButtonItem: React.FC<Props> = ({ permission, item, onClick, style }) => {
 
     const [isOpen, setIsOpen] = React.useState(false);
     const navigate = useNavigate();

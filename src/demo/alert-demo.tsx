@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Alert from "./alert"
-import useAlertPopup from "./alert-popup-hook";
-import AlertPopup from "./alert-popup"
-import { CenteringContainer } from "../elements/centering-container";
+import Alert from "../ui-kit/alert/alert"
+import useAlertPopup from "../ui-kit/alert/alert-popup-hook";
+import AlertPopup from "../ui-kit/alert/alert-popup"
+import { CenteringContainer } from "../ui-kit/elements/centering-container";
 
 
 function AlertsDemo() {

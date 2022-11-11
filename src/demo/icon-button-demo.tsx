@@ -1,8 +1,8 @@
-import IconButton from "./icon-button";
+import IconButton from "../ui-kit/icon-button/icon-button";
 import { RiShoppingCart2Fill } from "react-icons/ri";
 import { RiFunctionFill } from "react-icons/ri";
 import { RiMailSendFill } from "react-icons/ri";
-import { CenteringContainer } from "../elements";
+import { CenteringContainer } from "../ui-kit/elements";
 
 
 function IconButtonDemo() {

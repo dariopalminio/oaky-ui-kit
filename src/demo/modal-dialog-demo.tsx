@@ -1,7 +1,7 @@
 
-import { CenteringContainer } from '../elements/centering-container';
-import ModalDialog from './modal-dialog';
-import useModalDialog from './use-modal-dialog';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import ModalDialog from '../ui-kit/dialog/modal-dialog';
+import useModalDialog from '../ui-kit/dialog/use-modal-dialog';
 
 
 function ModalDialogDemo() {

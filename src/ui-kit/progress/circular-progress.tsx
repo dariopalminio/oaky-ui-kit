@@ -35,7 +35,7 @@ interface Props {
  * Circular Progress for loading process
  * Stateless components and controlled component
  */
-export const CircularProgress: React.FC<Props> = ({ children }) => {
+const CircularProgress: React.FC<Props> = ({ children }) => {
 
   return (
     <CircularProgressContainer>

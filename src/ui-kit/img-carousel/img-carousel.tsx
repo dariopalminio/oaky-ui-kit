@@ -91,7 +91,7 @@ interface Props {
 /**
  * Img Carousel
  */
-export const ImgCarousel: React.FC<Props> = ({ uniqueId, images, width, height }) => {
+const ImgCarousel: React.FC<Props> = ({ uniqueId, images, width, height }) => {
     const [selected, setSelected] = useState(0); //Index of selected image at front
     const zIndexUp = 4; //Image in front has maximum zindex
     const zIndexDown = 3; //Image behind has lower zindex

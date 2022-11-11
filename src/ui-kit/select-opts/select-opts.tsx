@@ -99,7 +99,7 @@ interface Props {
 /**
  * Select Option as List Box
  */
-export const SelectOptions: React.FC<Props> = ({ label, list, selectedOption, setSelectedOption, defaultValue, placeholder, style }) => {
+const SelectOptions: React.FC<Props> = ({ label, list, selectedOption, setSelectedOption, defaultValue, placeholder, style }) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const showDropdownHandler = () => setShowDropdown(!showDropdown);
     const selectPlaceholder = placeholder || "Choose an option";

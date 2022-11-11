@@ -26,7 +26,7 @@ interface Props {
 /**
  * Layout Context Provider
  */
-export const LayoutContextProvider: FC<Props> = ({ children }) => {
+const LayoutContextProvider: FC<Props> = ({ children }) => {
     const theme: any = useTheme();
     const [sidebarWidth, setSidebarWidth] = useState(0);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

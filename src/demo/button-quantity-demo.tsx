@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { CenteringContainer } from "../elements/centering-container";
-import ButtonQuantity from "./button-quantity";
+import { CenteringContainer } from "../ui-kit/elements/centering-container";
+import ButtonQuantity from "../ui-kit/button-quantity/button-quantity";
 
 function ButtonQuantityDemo() {
 

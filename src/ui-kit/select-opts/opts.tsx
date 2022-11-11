@@ -13,7 +13,7 @@ export const LiSelectOption = styled.li`
   }
 `;
 
-export const Opts: React.FC<{
+const Opts: React.FC<{
   children: ReactNode | ReactNode[];
   value: string;
   changeSelectedOption: (valueSelected: string) => void;

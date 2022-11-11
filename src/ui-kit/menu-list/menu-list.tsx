@@ -13,7 +13,7 @@ interface Props {
 /**
  * Menu Accordion
  */
-export const MenuList: React.FC<Props> = ({ id, permission, menuList, backgroundColor, hoverColor, style }) => {
+const MenuList: React.FC<Props> = ({ id, permission, menuList, backgroundColor, hoverColor, style }) => {
 
     const isShowed = (item: MenuItemType) => {
         return permission? item.access.includes(permission) : false;

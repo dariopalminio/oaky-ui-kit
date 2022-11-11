@@ -32,7 +32,7 @@ interface Props {
  * Paper for container
  * Stateless components, extensible Style and controlled component
  */
-export const Paper: React.FC<Props> = ({ children, style }) => {
+const Paper: React.FC<Props> = ({ children, style }) => {
 
 
     return (

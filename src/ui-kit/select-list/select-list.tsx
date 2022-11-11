@@ -74,7 +74,7 @@ interface Props {
  * Select List components is used for collecting user provided information from a list of options.
  * Stateless components, extensible Style and controlled component
  */
-export const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDelete, currentSelected, withDelete, style }) => {
+const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDelete, currentSelected, withDelete, style }) => {
 
 
     const selectItem = (item: string, index: number) => {

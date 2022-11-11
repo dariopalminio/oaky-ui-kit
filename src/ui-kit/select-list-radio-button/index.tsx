@@ -1,1 +1,1 @@
-export { RadioButtonList } from './radio-button-list'
+export { default as RadioButtonList } from './radio-button-list'

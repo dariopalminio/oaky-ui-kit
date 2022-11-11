@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
-import { CenteringContainer } from '../elements/centering-container';
-import SelectOpts from './select-opts';
+import { CenteringContainer } from '../ui-kit/elements/centering-container';
+import SelectOpts from '../ui-kit/select-opts/select-opts';
 
 function SelectOptsDemo() {
     const listToSelect = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];

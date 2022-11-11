@@ -33,7 +33,7 @@ interface Props {
  * Paper for container
  * Stateless components, extensible Style and controlled component
  */
-export const SingleAttrTable: React.FC<Props> = ({ rowDictionary, style }) => {
+const SingleAttrTable: React.FC<Props> = ({ rowDictionary, style }) => {
 
 
 

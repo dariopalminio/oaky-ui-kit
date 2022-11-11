@@ -13,7 +13,7 @@ interface Props {
  * Menu Icon-Button
  * Stateless components, extensible Style and controlled component
  */
-export const MenuIconButton: React.FC<Props> = ({ isOpen, permission, menuList, onClick, style }) => {
+const MenuIconButton: React.FC<Props> = ({ isOpen, permission, menuList, onClick, style }) => {
 
     const isShowed = (item: MenuItemType) => {
         return permission ? item.access.includes(permission) : false;

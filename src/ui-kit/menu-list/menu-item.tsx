@@ -39,7 +39,7 @@ interface Props {
 /**
  * Menu Item for Menu Accordion
  */
-export const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, style }) => {
+const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, style }) => {
     const [styleHover, setStyleHover] = useState({});
     const location = useLocation();
 
