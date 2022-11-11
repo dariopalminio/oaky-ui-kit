@@ -1,5 +1,5 @@
 
-export enum AccessType {
+export const enum AccessType {
     ANONYMOUS = "anonymous",
     USER = "user",
     ADMIN = "admin",

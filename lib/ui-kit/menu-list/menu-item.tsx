@@ -1,5 +1,4 @@
 import { MenuItemType } from "./types";
-import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -34,14 +33,15 @@ interface Props {
     backgroundColor?: string;
     hoverColor?: string;
     style?: any;
+    onClick: (item: MenuItemType) => void;
 }
 
 /**
  * Menu Item for Menu Accordion
  */
-const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, style }) => {
+const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onClick, style }) => {
     const [styleHover, setStyleHover] = useState({});
-    const location = useLocation();
+    //const location = useLocation();
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
@@ -59,11 +59,16 @@ const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, styl
                     style: { background: backgroundColor },
                 })}
             >
-                <Link to={menuItem.path} state={location}
-                    className="submenulink" onMouseEnter={(e) => handleMouseEnter(e)}
-                    onMouseLeave={(e) => handleMouseLeave(e)} style={styleHover}>
+                
+                <a  href="javascript:void(0)"
+                    onClick={ () => onClick(menuItem) }
+                    className="submenulink" 
+                    onMouseEnter={(e) => handleMouseEnter(e)}
+                    onMouseLeave={(e) => handleMouseLeave(e)} 
+                    style={styleHover}>
                     {menuItem.icon}&nbsp;{menuItem.title}
-                </Link>
+                </a>
+              
             </div>
         </StylesSubMenuItem>
     );

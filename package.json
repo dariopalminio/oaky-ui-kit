@@ -1,22 +1,22 @@
 {
   "name": "daro-ui-kit",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dario Palminio",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",   
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""   
-},
+    "preview": "vite preview",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.6.0",
-    "react-router-dom": "6.4.2",
-    "styled-components": "5.3.6"
+    "react": "18.2.0  || >=18.x",
+    "react-dom": "18.2.0 || >=18.x",
+    "react-icons": "4.6.0",
+    "react-router-dom": ">=6.4.2",
+    "styled-components": ">=5.3.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
@@ -25,11 +25,9 @@
     "@types/node": "18.8.3",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
-    "@types/react-router-dom": "5.3.3",
     "@types/styled-components": "5.1.26",
     "@vitejs/plugin-react": "^2.1.0",
     "eslint-plugin-react-hooks": "4.6.0",
-    "react-test-renderer": "18.2.0",
     "typescript": "4.6.4",
     "vite": "3.1.0",
     "vite-plugin-dts": "^1.7.0"
@@ -37,19 +35,20 @@
   "peerDependencies": {
     "react": "18.2.0  || >=18.x",
     "react-dom": "18.2.0 || >=18.x",
+    "react-router-dom": ">=6.4.2",
     "styled-components": ">=5.3.6"
-},
-"files": [
+  },
+  "files": [
     "dist"
-],
-"main": "./dist/daro-ui-kit.umd.js",
-"module": "./dist/daro-ui-kit.es.js",
-"types": "./dist/index.d.ts",
-"exports": {
+  ],
+  "main": "./dist/daro-ui-kit.umd.js",
+  "module": "./dist/daro-ui-kit.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
     ".": {
-        "import": "./dist/daro-ui-kit.es.js",
-        "require": "./dist/daro-ui-kit.umd.js"
+      "import": "./dist/daro-ui-kit.es.js",
+      "require": "./dist/daro-ui-kit.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
-}
+  }
 }

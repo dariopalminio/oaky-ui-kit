@@ -1,5 +1,5 @@
 
-import { useNavigate } from "react-router-dom";
+
 import { MenuItemType } from "../menu-list/types";
 import styled from "styled-components";
 import IconButton from "../icon-button/icon-button";
@@ -16,7 +16,7 @@ const MenuIconButtonItemContainer = styled.div`
 interface Props {
     permission?: string;
     item: MenuItemType;
-    onClick?: (item: MenuItemType) => void;
+    onClick: (item: MenuItemType) => void;
     style?: any;
 }
 
@@ -26,17 +26,17 @@ interface Props {
 const MenuIconButtonItem: React.FC<Props> = ({ permission, item, onClick, style }) => {
 
     const [isOpen, setIsOpen] = React.useState(false);
-    const navigate = useNavigate();
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen); // open or close MenuListFloat
-    };
+    
 
     const handleClick = (item: MenuItemType) => {
         toggleMenu(); // open or close MenuListFloat
-        if ((item.submenu === null) && item.path)
-            navigate(item.path) //redirect
-        if (onClick) onClick(item);
+        if (!item.submenu) {
+            onClick(item);
+        }
+    };
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen); // open or close MenuListFloat
     };
 
     const getSubmenuData = (): MenuItemType[] => {
@@ -48,7 +48,7 @@ const MenuIconButtonItem: React.FC<Props> = ({ permission, item, onClick, style 
         {...(style && 
             (style= {style})
           )}>
-        <IconButton onClick={() => handleClick(item)}
+         <IconButton onClick={() => handleClick(item)}
         >
             {item.icon}
         </IconButton>
@@ -60,7 +60,7 @@ const MenuIconButtonItem: React.FC<Props> = ({ permission, item, onClick, style 
                 permission={permission}
                 menuList={getSubmenuData()}
                 toogle={()=>toggleMenu()}
-                onClick={(itemElement: MenuItemType) => handleClick(itemElement)}
+                onClick={(itemElement: MenuItemType) => onClick(itemElement)}
             />
         ))}
     </MenuIconButtonItemContainer>

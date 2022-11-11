@@ -36,7 +36,7 @@ const LayoutContextProvider: FC<Props> = ({ children }) => {
     }, []);
 
     function toggleSidebar() {
-        setSidebarWidth(isSidebarOpen? 0 : theme.layout.sidebarWidth);
+        setSidebarWidth(isSidebarOpen? 0 : theme["primary"].layout.sidebarWidth);
         setIsSidebarOpen(!isSidebarOpen);
     }
 
