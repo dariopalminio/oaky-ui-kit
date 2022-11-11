@@ -30,6 +30,6 @@
     ]
   },
   "include": ["lib/**/*"],
-  "exclude": ["node_modules", "build/**/*", "dist", "../it-simple-react-ui-demo/src/main.tsx"],
+  "exclude": ["node_modules", "build/**/*", "dist", "../daro-ui-kit-demo/src/main.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

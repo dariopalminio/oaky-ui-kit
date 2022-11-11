@@ -16,7 +16,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'lib/index.ts'),
             name: 'ItSimpleReactUI',
             formats: ['es', 'umd'],
-            fileName: (format) => `it-simple-react-ui.${format}.js`,
+            fileName: (format) => `daro-ui-kit.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'styled-components'],

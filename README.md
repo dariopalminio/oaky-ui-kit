@@ -1,4 +1,4 @@
-# it-simple-react-ui
+# daro-ui-kit
 UI Kit with react, typescript and CSS
 
 ## References

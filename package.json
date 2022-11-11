@@ -1,5 +1,5 @@
 {
-  "name": "it-simple-react-ui",
+  "name": "daro-ui-kit",
   "private": true,
   "version": "1.0.0",
   "author": "Dario Palminio",
@@ -42,13 +42,13 @@
 "files": [
     "dist"
 ],
-"main": "./dist/it-simple-react-ui.umd.js",
-"module": "./dist/it-simple-react-ui.es.js",
+"main": "./dist/daro-ui-kit.umd.js",
+"module": "./dist/daro-ui-kit.es.js",
 "types": "./dist/index.d.ts",
 "exports": {
     ".": {
-        "import": "./dist/it-simple-react-ui.es.js",
-        "require": "./dist/it-simple-react-ui.umd.js"
+        "import": "./dist/daro-ui-kit.es.js",
+        "require": "./dist/daro-ui-kit.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
 }
