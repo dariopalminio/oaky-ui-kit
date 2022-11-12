@@ -1,10 +1,13 @@
 
-export const enum AccessType {
-    ANONYMOUS = "anonymous",
-    USER = "user",
-    ADMIN = "admin",
-  }
+ const AccessType = {
+  ANONYMOUS: "anonymous",
+  USER: "user",
+  ADMIN: "admin",
+}
 
+export { AccessType };
+  
+ 
 /**
  * Interface Type for Menu Item
  */
