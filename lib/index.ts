@@ -2,6 +2,7 @@
 export * from './ui-kit/alert'
 export * from './ui-kit/button'
 export * from './ui-kit/button-quantity'
+export * from './ui-kit/checkbox'
 export * from './ui-kit/elements'
 export * from './ui-kit/icon-button'
 export * from './ui-kit/img-carousel'

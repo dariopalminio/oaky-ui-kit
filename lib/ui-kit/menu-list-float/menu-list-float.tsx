@@ -70,6 +70,11 @@ const MenuListFloat: React.FC<Props> = ({ id, isOpen, permission, menuList, onCl
         toogle();
     }
 
+    const handleOnClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, item: MenuItemType) =>{
+        e.preventDefault();
+        onClick(item);
+    }
+
     return (<>
         {isOpen && (
             <StylesMenuListFloat>
@@ -78,8 +83,9 @@ const MenuListFloat: React.FC<Props> = ({ id, isOpen, permission, menuList, onCl
                         if (isShowed(item))
                             return (
                                 <div className="menu_float_items" key={index}>
-                                    <a  href="javascript:void(0)"
-                                     className="menu_float_link" onClick={() => onClick(item)}>
+                                    <a  href="#"
+                                     className="menu_float_link" 
+                                     onClick={(e) => handleOnClickLink(e,item)}>
                                         {item.icon}&nbsp;{item.title}
                                     </a>
                                 </div>

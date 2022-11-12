@@ -52,6 +52,11 @@ const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onCl
         setStyleHover(backgroundColor ? { background: backgroundColor } : {});
     };
 
+    const handleOnClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{
+        e.preventDefault();
+        onClick(menuItem);
+    }
+
     return (
         <StylesSubMenuItem>
             <div key={menuItem.key} className="submenuItems"
@@ -60,8 +65,8 @@ const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onCl
                 })}
             >
                 
-                <a  href="javascript:void(0)"
-                    onClick={ () => onClick(menuItem) }
+                <a  href="#"
+                    onClick={ (e) => handleOnClickLink(e) }
                     className="submenulink" 
                     onMouseEnter={(e) => handleMouseEnter(e)}
                     onMouseLeave={(e) => handleMouseLeave(e)} 

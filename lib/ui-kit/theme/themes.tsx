@@ -15,8 +15,13 @@ const PrimaryTheme = {
   paper: {
     border: "1px solid #d7d7d7",
     boxShadow: "0px 5px 20px #1687d933",
+  },
+  color: {
+    info:'#42bdff',
+    success:'#12DBAD',
+    warning:'#EBC60C',
+    error:'#FB5F57'
   }
-
 };
 const SecondaryTheme = {
   layout: PrimaryTheme.layout,
@@ -28,8 +33,8 @@ const SecondaryTheme = {
     hoverColor: "rgb(255, 255, 255)",
     hoverBoxShadow: "box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 24px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
   },
-  paper: PrimaryTheme.paper
-
+  paper: PrimaryTheme.paper,
+  color: PrimaryTheme.color
 };
 
 const DisableTheme = {
@@ -42,7 +47,8 @@ const DisableTheme = {
     hoverColor: "rgb(255, 255, 255)",
     hoverBoxShadow: "box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
   },
-  paper: PrimaryTheme.paper
+  paper: PrimaryTheme.paper,
+  color: PrimaryTheme.color
 
 };
 
@@ -56,8 +62,8 @@ const DangerTheme = {
     hoverColor: "rgb(255, 255, 255)",
     hoverBoxShadow: "5px -5px 15px 0 rgba(255, 127, 156, 0.5), -5px 5px 15px 0 rgba(255, 127, 156, 0.7)",
   },
-  paper: PrimaryTheme.paper
-
+  paper: PrimaryTheme.paper,
+  color: PrimaryTheme.color
 }
 
 const Themes = {

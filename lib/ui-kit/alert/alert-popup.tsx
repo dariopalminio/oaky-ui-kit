@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 const Popup = styled.div`
     position: fixed;
@@ -84,16 +84,18 @@ interface Props {
  */
 const AlertPopup: React.FC<Props> = ({ severity, children, toggle, style }) => {
 
+    const theme: any = useTheme();
+    
     const getBackgroundBySeverity = () => {
         switch (severity) {
             case 'success':
-                return '#12DBAD';
+                return theme["primary"].color.success;
             case 'error':
-                return '#FB5F57';
+                return theme["primary"].color.error;
             case 'info':
-                return '#42bdff';
+                return theme["primary"].color.info;
             case 'warning':
-                return '#EBC60C';
+                return theme["primary"].color.warning;
             default:
                 return '#42bdff';
         }

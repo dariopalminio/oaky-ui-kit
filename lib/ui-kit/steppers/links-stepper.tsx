@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CenteringContainer } from "../elements/centering-container";
 
@@ -40,18 +39,23 @@ const LinksStepper: React.FC<Props> = ({ list, currentIndex, onClick }) => {
         return 'blue';
     }
 
+    const handleOnClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, index: number) =>{
+        e.preventDefault();
+        onClick(index);
+    }
+
     return (
         <>
             <OptionsLinksWrapper>
                 <CenteringContainer>
                     {list && list.map((element: any, index: number) => {
                         return (
-                                <Link key={index.toString()}
-                                    to="#"
-                                    style={{ color: getLinkColor(element), padding: "5px" }}
-                                    onClick={() => onClick(index)}>
-                                    {element.name}
-                                </Link>
+                            <a href="#"
+                                key={index.toString()}
+                                style={{ color: getLinkColor(element), padding: "5px" }}
+                                onClick={(e) => handleOnClickLink(e, index)}>
+                                {element.name}
+                            </a>
                         )
                     }
                     )}

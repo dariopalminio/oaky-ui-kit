@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 //Styled-components
 const AlertBox = styled.div`
@@ -49,6 +49,8 @@ interface Props {
  */
 const Alert: React.FC<Props> = ({ severity, children }) => {
 
+    const theme: any = useTheme();
+    
     const getId = () => {
         return severity ? 'alert-box-' + severity : 'alert-box-';
     }
@@ -69,13 +71,13 @@ const Alert: React.FC<Props> = ({ severity, children }) => {
     const getBackgroundBySeverity = () => {
         switch (severity) {
             case 'success':
-                return '#12DBAD';
+                return theme["primary"].color.success;
             case 'error':
-                return '#FB5F57';
+                return theme["primary"].color.error;
             case 'info':
-                return '#42bdff';
+                return theme["primary"].color.info;
             case 'warning':
-                return '#EBC60C';
+                return theme["primary"].color.warning;
             default:
                 return '#42bdff';
         }
