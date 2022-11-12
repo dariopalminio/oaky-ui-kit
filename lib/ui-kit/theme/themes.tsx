@@ -76,4 +76,13 @@ const Themes = {
     danger: DangerTheme //Indicates a dangerous or negative action.
   };
 
+  const ThemesEnum = {
+    disabled: "disabled",
+    primary: "primary",
+    secondary: "secondary",
+    danger: "danger"
+  }
+  
+export { ThemesEnum };
+
 export default Themes;

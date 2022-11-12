@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ThemesEnum } from "../theme/themes";
 
 //Styled-components
 const QtyContainer = styled.div`
@@ -78,9 +79,15 @@ const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled 
     };
 
     const getStyleType = () => {
-       const dis: boolean = disabled? disabled : false;
-       if (dis === true) return "disabled";
-       return styleType ? styleType : "primary";
+        if (!styleType || styleType === undefined || styleType === null) {
+            return ThemesEnum.primary;
+        }
+        const dis: boolean = disabled ? disabled : false;
+        if (dis === true) return ThemesEnum.disabled;
+        const st = styleType ? styleType : "primary";
+        const arr: string[] = Object.keys(ThemesEnum);
+        if (arr.includes(st)) return st;
+        return ThemesEnum.primary;
     }
 
     return (
@@ -89,9 +96,9 @@ const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled 
                 type='button'
                 value='-'
                 onClick={() => handlerQtyminus()}
-                styleType={getStyleType()} 
-                disabled={disabled? disabled : false}
-                />
+                styleType={getStyleType()}
+                disabled={disabled ? disabled : false}
+            />
             <InputQty
                 type='text'
                 name='quantity'
@@ -101,8 +108,8 @@ const ButtonQuantity: React.FC<Props> = ({ value, onChange, styleType, disabled 
                 type='button'
                 value='+'
                 onClick={() => handlerQtyplus()}
-                styleType={getStyleType()} 
-                disabled={disabled? disabled : false}/>
+                styleType={getStyleType()}
+                disabled={disabled ? disabled : false} />
         </QtyContainer>
     );
 };

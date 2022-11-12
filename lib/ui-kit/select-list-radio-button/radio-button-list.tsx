@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ThemesEnum } from "../theme/themes";
 
 //Custom props for attaching additional props to Styled-components
 interface RadioButtonProps {
@@ -105,8 +106,18 @@ const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, curr
         return (currentSelected > -1);
     }
 
+    const getStyleType = () => {
+        if (!styleType || styleType === undefined || styleType === null) {
+            return ThemesEnum.primary;
+        }
+        const st=  styleType ? styleType : ThemesEnum.secondary;
+        const arr: string [] = Object.keys(ThemesEnum);
+        if (arr.includes(st)) return st;
+        return ThemesEnum.secondary;
+     }
+     
     return (
-        <StylesRadioButton styleType={styleType ? styleType : "secondary"}>
+        <StylesRadioButton styleType={getStyleType()}>
         <SelectListGroup>
             {label && <LabelSelectList style={!thereIsSomeSelected()? {color: "#cc0033"} : {}}>{label}</LabelSelectList>}
             <RadioButtonsWrapper>

@@ -1,5 +1,7 @@
 import React from "react";
+import { arrayBuffer } from "stream/consumers";
 import styled from "styled-components";
+import { ThemesEnum } from "../theme/themes";
 
 //Custom props for attaching additional props to Styled-components
 interface ButtonProps {
@@ -67,10 +69,20 @@ interface Props {
  */
 const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
 
+    const getStyleType = () => {
+        if (!styleType || styleType === undefined || styleType === null) {
+            return ThemesEnum.primary;
+        }
+        const st = styleType ? styleType : ThemesEnum.primary;
+        const arr: string[] = Object.keys(ThemesEnum);
+        if (arr.includes(st)) return st;
+        return ThemesEnum.primary;
+    }
+
     return (
         <>
             {disabled && (
-                <GradientButtonDisabled 
+                <GradientButtonDisabled
                     disabled
                 >
                     {children}
@@ -78,19 +90,19 @@ const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, sty
             )}
 
             {(!disabled && type) && (
-                <GradientButton styleType={styleType ? styleType : "primary"}
+                <GradientButton styleType={getStyleType()}
                     onClick={onClick}
                     type={type}
-                    {...(style && 
-                        (style= {style})
-                      )}
+                    {...(style &&
+                        (style = { style })
+                    )}
                 >
                     {children}
                 </GradientButton>
             )}
 
             {(!disabled && !type) && (
-                <GradientButton styleType={styleType ? styleType : "default"}
+                <GradientButton styleType={getStyleType()}
                     onClick={onClick}
                     style={style ? style : {}}
                 >
