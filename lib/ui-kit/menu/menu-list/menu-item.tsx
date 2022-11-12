@@ -1,4 +1,4 @@
-import { MenuItemType } from "./types";
+import { MenuItemType } from "../types";
 import { useState } from "react";
 import styled from "styled-components";
 

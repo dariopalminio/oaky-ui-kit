@@ -41,7 +41,7 @@ export const StylesTextField = styled.div`
     }
 
     .error-message {
-        color: #cc0033;
+        color: ${props => props.theme["primary"].color.error};
         display: inline-block;
         font-size: 12px;
         line-height: 15px;
@@ -53,18 +53,18 @@ export const StylesTextField = styled.div`
     }
     
     .error-text-field label {
-        color: #cc0033;
+        color: ${props => props.theme["primary"].color.error};
     }
     
     .error-text-field input[type=text] {
         background-color: #fce4e4;
-        border: 1px solid #cc0033;
+        border: 1px solid ${props => props.theme["primary"].color.error};
         outline: none;
     }
 
     .error-text-field input[type=password] {
         background-color: #fce4e4;
-        border: 1px solid #cc0033;
+        border: 1px solid ${props => props.theme["primary"].color.error};
         outline: none;
     }
     

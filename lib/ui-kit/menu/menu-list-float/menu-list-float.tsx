@@ -1,4 +1,4 @@
-import { MenuItemType } from "../menu-list/types";
+import { MenuItemType } from "../types";
 import styled from "styled-components";
 
 const StylesMenuListFloat = styled.div`

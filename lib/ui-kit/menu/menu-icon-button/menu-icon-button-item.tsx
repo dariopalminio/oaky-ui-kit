@@ -1,8 +1,8 @@
 
 
-import { MenuItemType } from "../menu-list/types";
+import { MenuItemType } from "../types";
 import styled from "styled-components";
-import IconButton from "../icon-button/icon-button";
+import IconButton from "../../icon-button/icon-button";
 import React from "react";
 import MenuListFloat from "../menu-list-float/menu-list-float";
 //<RiAccountCircleFill size={20} /> user

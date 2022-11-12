@@ -20,7 +20,10 @@ const PrimaryTheme = {
     info:'#42bdff',
     success:'#12DBAD',
     warning:'#EBC60C',
-    error:'#FB5F57'
+    error:'#FB5F57',
+    shadow:'#aaa',
+    background:"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    hover:"rgb(255, 255, 255)"
   }
 };
 const SecondaryTheme = {
