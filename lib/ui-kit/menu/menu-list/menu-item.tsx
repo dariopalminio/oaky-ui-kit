@@ -34,12 +34,13 @@ interface Props {
     hoverColor?: string;
     style?: any;
     onClick: (item: MenuItemType) => void;
+    isOpenSidebar?: boolean;
 }
 
 /**
  * Menu Item for Menu Accordion
  */
-const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onClick, style }) => {
+const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onClick, style, isOpenSidebar }) => {
     const [styleHover, setStyleHover] = useState({});
     //const location = useLocation();
 
@@ -52,7 +53,7 @@ const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onCl
         setStyleHover(backgroundColor ? { background: backgroundColor } : {});
     };
 
-    const handleOnClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{
+    const handleOnClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         onClick(menuItem);
     }
@@ -64,16 +65,17 @@ const MenuItem: React.FC<Props> = ({ menuItem, backgroundColor, hoverColor, onCl
                     style: { background: backgroundColor },
                 })}
             >
-                
-                <a  href="#"
-                    onClick={ (e) => handleOnClickLink(e) }
-                    className="submenulink" 
+
+                <a href="#"
+                    onClick={(e) => handleOnClickLink(e)}
+                    className="submenulink"
                     onMouseEnter={(e) => handleMouseEnter(e)}
-                    onMouseLeave={(e) => handleMouseLeave(e)} 
+                    onMouseLeave={(e) => handleMouseLeave(e)}
                     style={styleHover}>
-                    {menuItem.icon}&nbsp;{menuItem.title}
+                    {menuItem.icon}&nbsp;
+                    {isOpenSidebar ? menuItem.title : null}
                 </a>
-              
+
             </div>
         </StylesSubMenuItem>
     );

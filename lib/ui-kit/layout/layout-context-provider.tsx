@@ -1,13 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { createContext } from 'react';
 import { useTheme } from "styled-components";
+import { ILayoutContext } from "./types";
 
-// Global user session context interface for provider
-export interface ILayoutContext {
-    sidebarWidth: number
-    isSidebarOpen: boolean
-    toggleSidebar: () => void
-};
 
 // Initial values for global user context 
 export const ILayoutContextDefaultValues: ILayoutContext = {
@@ -35,8 +30,9 @@ const LayoutContextProvider: FC<Props> = ({ children }) => {
 
     }, []);
 
-    function toggleSidebar() {
-        setSidebarWidth(isSidebarOpen? 0 : theme["primary"].layout.sidebarWidth);
+    function toggleSidebar(styleType?: string) {
+        const style: string = styleType? styleType : "primary";
+        setSidebarWidth(isSidebarOpen? theme[style].layout.sidebarWidthMin : theme[style].layout.sidebarWidthMax);
         setIsSidebarOpen(!isSidebarOpen);
     }
 

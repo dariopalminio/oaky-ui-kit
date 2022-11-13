@@ -9,12 +9,13 @@ interface MenuListProps {
     backgroundColor?: string;
     hoverColor?: string;
     style?: any;
+    isOpenSidebar?: boolean; 
 }
 
 /**
  * Menu Accordion
  */
-const MenuList: React.FC<MenuListProps> = ({ id, permission, menuList, backgroundColor, hoverColor, style, onClick }) => {
+const MenuList: React.FC<MenuListProps> = ({ id, permission, menuList, backgroundColor, hoverColor, style, onClick, isOpenSidebar=true }) => {
 
     const isShowed = (item: MenuItemType) => {
         return permission ? item.access.includes(permission) : false;
@@ -33,7 +34,8 @@ const MenuList: React.FC<MenuListProps> = ({ id, permission, menuList, backgroun
                             key={index}
                             menuItem={item}
                             backgroundColor={backgroundColor}
-                            hoverColor={hoverColor} />
+                            hoverColor={hoverColor} 
+                            isOpenSidebar={isOpenSidebar}/>
                     );
             })}
 

@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import IconButton from "../../icon-button/icon-button";
-import { ILayoutContext, LayoutContext } from "../layout-context-provider";
+import { LayoutContext } from "../layout-context-provider";
 import { RiCloseFill } from "react-icons/ri"; //ChevronLeftIcon
+import { ILayoutContext } from "../types";
 
 
 //Styled-components
@@ -84,10 +85,14 @@ interface Props {
  * 
  * Patterns: Render Prop, Presentation Component and Context Provider
  */
-const Layout: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
+const LayoutPrimary: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
         toggleSidebar } = useContext(LayoutContext) as ILayoutContext;
+
+    useEffect(() => {
+        if (isSidebarOpen) toggleSidebar();
+    }, []);
 
     const handleToggle = () => {
         toggleSidebar();
@@ -124,4 +129,4 @@ const Layout: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     );
 };
 
-export default Layout;
+export default LayoutPrimary;

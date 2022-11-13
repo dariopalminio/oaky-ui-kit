@@ -1,6 +1,7 @@
 const PrimaryTheme = {
   layout: {
-    sidebarWidth: 240,
+    sidebarWidthMax: 240,
+    sidebarWidthMin: 0,
     headerHeight: 50,
     headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
   },
@@ -26,8 +27,14 @@ const PrimaryTheme = {
     hover:"rgb(255, 255, 255)"
   }
 };
+
 const SecondaryTheme = {
-  layout: PrimaryTheme.layout,
+  layout: {
+    sidebarWidthMax: 240,
+    sidebarWidthMin: 50,
+    headerHeight: 50,
+    headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
+  },
   button: {
     color: "white",
     background: "#98CDFD",

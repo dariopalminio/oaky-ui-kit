@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import { RiMenuFill } from "react-icons/ri";
-import IconButton from "./../../icon-button/icon-button";
-import { ILayoutContext, LayoutContext } from "../layout-context-provider";
-
-
+import IconButton from "../../icon-button/icon-button";
+import { LayoutContext } from "../layout-context-provider";
+import { ILayoutContext } from "../types";
 
 const Topbar = styled.div`
   position: relative;
@@ -57,20 +56,21 @@ const TopNavBar: React.FC<IProps> = (props: IProps) => {
 
         <Topbar>
             {!isSidebarOpen &&
-                <IconButton onClick={toggleSidebar} style={{ justifySelf: "left", marginLeft: "5px" }}>
+                <IconButton onClick={()=> toggleSidebar()}
+                    style={{ justifySelf: "left", marginLeft: "5px" }}>
                     <RiMenuFill size={24} />
                 </IconButton>
             }
 
             <div style={containerTopMenuStyle}>
-                { props.logo && (
-                <LogoImg style={{ marginRight: "10px" }}
-                    src={props.logo}
-                    onError={({ currentTarget }) => {
-                        currentTarget.onerror = null; // prevents looping
-                        currentTarget.src = "../images/no-image.jpg";
-                    }}
-                    loading="lazy" />
+                {props.logo && (
+                    <LogoImg style={{ marginRight: "10px" }}
+                        src={props.logo}
+                        onError={({ currentTarget }) => {
+                            currentTarget.onerror = null; // prevents looping
+                            currentTarget.src = "../images/no-image.jpg";
+                        }}
+                        loading="lazy" />
                 )}
             </div>
 
