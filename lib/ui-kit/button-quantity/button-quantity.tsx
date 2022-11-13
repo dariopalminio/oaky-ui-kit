@@ -57,7 +57,7 @@ const InputQty = styled.input`
 interface Props {
     value: number;
     onChange: (newQuantityValue: number) => void;
-    styleType?: string;
+    styleType?: "disabled" | "primary" | "secondary" | "danger";
     disabled?: boolean;
 }
 

@@ -60,7 +60,7 @@ interface Props {
     type?: "button" | "submit" | "reset" | undefined;
     style?: any;
     disabled?: boolean,
-    styleType?: string
+    styleType?: "disabled" | "primary" | "secondary" | "danger";
 }
 
 /**

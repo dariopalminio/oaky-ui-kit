@@ -15,19 +15,21 @@ interface Props {
     labelNext: string;
     handlePrevious: () => void;
     handleNext: () => void;
+    styleType?: "disabled" | "primary" | "secondary" | "danger";
 }
 
 /**
  * Previous and Next buttons
  * Stateless components and controlled component
  */
-const PreviousNextButtons: React.FC<Props> = ({ labelPrevious, labelNext, handlePrevious, handleNext }) => {
+const PreviousNextButtons: React.FC<Props> = ({ labelPrevious, labelNext, handlePrevious, handleNext, styleType }) => {
 
     return (
         <ButtonsWrapper>
 
             <Button
                 type="button"
+                styleType={styleType}
                 style={{ top: "0", right: "0" }}
                 onClick={() => handlePrevious()}
             >
@@ -36,6 +38,7 @@ const PreviousNextButtons: React.FC<Props> = ({ labelPrevious, labelNext, handle
 
             <Button
                 type="button"
+                styleType={styleType}
                 style={{ top: "0", right: "0" }}
                 onClick={() => handleNext()}
             >

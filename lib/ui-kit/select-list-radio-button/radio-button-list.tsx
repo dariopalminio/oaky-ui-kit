@@ -82,7 +82,7 @@ interface Props {
     currentSelected?: number;
     style?: any;
     list: string[];
-    styleType?: string;
+    styleType?: "disabled" | "primary" | "secondary" | "danger";
 }
 
 /**
