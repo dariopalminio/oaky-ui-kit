@@ -76,6 +76,9 @@ React Component Library with Vite and Deploy in NPM:
 - https://articles.wesionary.team/react-component-library-with-vite-and-deploy-in-npm-579c2880d6ff
 - https://github.com/bigyanpoudel/react-vite-library
 
+Release versions in NPM:
+- https://medium.com/att-israel/npm-versions-explained-60e4d6b9920f
+
 
 ## Stay in touch
 
