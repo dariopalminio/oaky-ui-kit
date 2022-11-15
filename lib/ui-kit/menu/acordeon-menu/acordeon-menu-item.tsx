@@ -8,6 +8,7 @@ const AcordeonMenuItemType = styled.li`
     display: block;
     padding: 12px 0px 12px 15px;
     &:hover {
+        color: black;
         background: ${props => props.theme["primary"].color.backgroundHover};
     }
 `;
@@ -20,7 +21,8 @@ const SubMenuItemType = styled.li`
     color: black;
     transition: all 0.4s ease-out;
     &:hover {
-        background: #E5E5E5;
+        color: black;
+        background: ${props => props.theme["primary"].color.backgroundHover};
     }
 `;
 
@@ -70,7 +72,10 @@ const AcordeonMenuItem: React.FC<Props> = ({ menuItem, onClick, isOpenSidebar })
                     return (
                         <SubMenuItemType key={index} onClick={() => handleOnClickSubMenuItem(item)}>
                             <AnchorLink href="#" onClick={(e) => handleOnClickAnchorLink(e)}>
-                                {item.icon}&nbsp;{item.title}
+                           
+                                {item.icon}&nbsp;
+                                { isOpenSidebar ? item.title : null}
+                           
                             </AnchorLink>
                         </SubMenuItemType>
                     );
