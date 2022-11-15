@@ -15,7 +15,7 @@ const StylesSubMenuItem = styled.div`
 
     .submenuItems .submenulink {
         display: block;
-        color: #727272;
+        color: black;
         margin-left: 0px;
         padding: 12px 0px 12px 15px;
         transition: all 0.4s ease-out;
@@ -23,7 +23,7 @@ const StylesSubMenuItem = styled.div`
     }
 
     .submenuItems:hover .submenulink:hover {
-        background: #E5E5E5;
+        background: ${props => props.theme["primary"].color.backgroundHover};
         color: black;
     }
 `;

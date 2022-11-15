@@ -9,7 +9,7 @@ export const LiSelectOption = styled.li`
   cursor: pointer;
   list-style-type: none;
   &:hover {
-    background-color: #d9d9d9;
+    background: ${props => props.theme["primary"].color.backgroundHover};
   }
 `;
 

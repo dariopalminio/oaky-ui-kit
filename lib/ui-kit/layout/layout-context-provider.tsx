@@ -8,7 +8,8 @@ import { ILayoutContext } from "./types";
 export const ILayoutContextDefaultValues: ILayoutContext = {
     sidebarWidth: 0,
     isSidebarOpen: false,
-    toggleSidebar: () => { }
+    toggleSidebar: () => { },
+    setSidebarWidth: (value: number) => { }
 };
 
 // Global cart context
@@ -41,7 +42,8 @@ const LayoutContextProvider: FC<Props> = ({ children }) => {
             value={{
                 sidebarWidth,
                 isSidebarOpen,
-                toggleSidebar
+                toggleSidebar,
+                setSidebarWidth
             }}
         >
             {children}

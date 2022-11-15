@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { LayoutContext } from "../layout-context-provider";
 import { ILayoutContext } from "../types";
 
@@ -28,7 +28,7 @@ const SideBarLeft = styled.div`
     z-index: 1;
     overflow-x: hidden;
     transition: 0.4s;
-    padding: 1rem 0;
+    padding: 0;
     box-sizing:border-box;
     `;
 
@@ -64,9 +64,12 @@ interface Props {
 const LayoutSecondary: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
-        toggleSidebar } = useContext(LayoutContext) as ILayoutContext;
+        toggleSidebar, setSidebarWidth } = useContext(LayoutContext) as ILayoutContext;
+
+    const theme: any = useTheme();
 
     useEffect(() => {
+        setSidebarWidth( theme['secondary'].layout.sidebarWidthMin);
         if (isSidebarOpen) toggleSidebar('secondary');
     }, []);
 

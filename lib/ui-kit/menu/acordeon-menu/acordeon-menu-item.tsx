@@ -8,7 +8,7 @@ const AcordeonMenuItemType = styled.li`
     display: block;
     padding: 12px 0px 12px 15px;
     &:hover {
-        background: #E5E5E5;
+        background: ${props => props.theme["primary"].color.backgroundHover};
     }
 `;
 

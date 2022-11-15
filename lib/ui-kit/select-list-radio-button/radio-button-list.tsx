@@ -31,7 +31,7 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
 
 .span_radio:hover,
 .input_radio_button[type="radio"]:checked + span{
-    background-color: #E9F1F7;
+    background: ${props => props.theme["primary"].color.backgroundHover};
 }
 
 .span_radio:before{

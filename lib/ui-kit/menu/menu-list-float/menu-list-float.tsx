@@ -35,7 +35,7 @@ const StylesMenuListFloat = styled.div`
     }
 
     .menu_float_items:hover .menu_float_link:hover {
-        background-color: #E5E5E5;
+        background: ${props => props.theme["primary"].color.backgroundHover};
         border-radius: 5px;
         color: black;
     }

@@ -36,7 +36,7 @@ const UlSelectList = styled.ul`
         line-height: 33px;
         width: 98%;
         &:hover {
-            background: rgb(235, 235, 235);
+            background: ${props => props.theme["primary"].color.backgroundHover};
         }
     }
 `;

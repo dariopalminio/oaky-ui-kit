@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import IconButton from "../../icon-button/icon-button";
 import { LayoutContext } from "../layout-context-provider";
 import { RiCloseFill } from "react-icons/ri"; //ChevronLeftIcon
@@ -88,9 +88,12 @@ interface Props {
 const LayoutPrimary: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
-        toggleSidebar } = useContext(LayoutContext) as ILayoutContext;
+        toggleSidebar, setSidebarWidth } = useContext(LayoutContext) as ILayoutContext;
+
+    const theme: any = useTheme();
 
     useEffect(() => {
+        setSidebarWidth(theme['primary'].layout.sidebarWidthMin);
         if (isSidebarOpen) toggleSidebar();
     }, []);
 
