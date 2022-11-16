@@ -85,7 +85,7 @@ interface Props {
  * 
  * Patterns: Render Prop, Presentation Component and Context Provider
  */
-const LayoutPrimary: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
+const LayoutCore: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
         toggleSidebar, setSidebarWidth } = useContext(LayoutContext) as ILayoutContext;
@@ -132,4 +132,4 @@ const LayoutPrimary: React.FC<Props> = ({ topbar, leftbar, footer, children }) =
     );
 };
 
-export default LayoutPrimary;
+export default LayoutCore;

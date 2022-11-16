@@ -31,9 +31,8 @@ const LayoutContextProvider: FC<Props> = ({ children }) => {
 
     }, []);
 
-    function toggleSidebar(styleType?: string) {
-        const style: string = styleType? styleType : "primary";
-        setSidebarWidth(isSidebarOpen? theme[style].layout.sidebarWidthMin : theme[style].layout.sidebarWidthMax);
+    function toggleSidebar() {
+        setSidebarWidth(isSidebarOpen? theme["primary"].layout.sidebarWidthMin : theme["primary"].layout.sidebarWidthMax);
         setIsSidebarOpen(!isSidebarOpen);
     }
 

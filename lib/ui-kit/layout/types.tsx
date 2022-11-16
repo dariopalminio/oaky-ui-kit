@@ -2,6 +2,6 @@
 export interface ILayoutContext {
     sidebarWidth: number
     isSidebarOpen: boolean
-    toggleSidebar: (styleType?: "primary" | "secondary" | undefined) => void
+    toggleSidebar: () => void
     setSidebarWidth: (value: number) => void
 };

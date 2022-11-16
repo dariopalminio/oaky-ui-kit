@@ -41,8 +41,9 @@ interface IProps {
 }
 
 /**
- * TopNavBar Function Component.
- * Header component.
+ * TopNavBar Function Component. Header component.
+ * 
+ * extensible Style and controlled component
  * @visibleName TopNavBar View
  */
 const TopNavBar: React.FC<IProps> = (props: IProps) => {
@@ -54,7 +55,7 @@ const TopNavBar: React.FC<IProps> = (props: IProps) => {
 
     return (
 
-        <Topbar>
+        <Topbar style={props.style ? props.style : {}}>
             {!isSidebarOpen &&
                 <IconButton onClick={()=> toggleSidebar()}
                     style={{ justifySelf: "left", marginLeft: "5px" }}>

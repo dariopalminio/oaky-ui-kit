@@ -1,10 +1,27 @@
-const PrimaryTheme = {
-  layout: {
+const LayoutStyleType = {
+  "core": {
     sidebarWidthMax: 240,
     sidebarWidthMin: 0,
     headerHeight: 50,
     headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
   },
+  "sensitive": {
+    sidebarWidthMax: 240,
+    sidebarWidthMin: 50,
+    headerHeight: 50,
+    headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
+  },
+  "bullet": {
+    sidebarWidthMax: 240,
+    sidebarWidthMin: 15,
+    headerHeight: 50,
+    headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
+  }
+}
+
+
+const PrimaryTheme = {
+  layout: LayoutStyleType.core,
   button: {
     color: "white",
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
@@ -18,24 +35,19 @@ const PrimaryTheme = {
     boxShadow: "0px 5px 20px #1687d933",
   },
   color: {
-    info:'#42bdff',
-    success:'#12DBAD',
-    warning:'#EBC60C',
-    error:'#FB5F57',
-    shadow:'#aaa',
-    background:"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-    hover:"black",
-    backgroundHover:"#CFE0EE"
+    info: '#42bdff',
+    success: '#12DBAD',
+    warning: '#EBC60C',
+    error: '#FB5F57',
+    shadow: '#aaa',
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    hover: "black",
+    backgroundHover: "#CFE0EE"
   }
 };
 
 const SecondaryTheme = {
-  layout: {
-    sidebarWidthMax: 240,
-    sidebarWidthMin: 50,
-    headerHeight: 50,
-    headerBackgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`,
-  },
+  layout: PrimaryTheme.layout,
   button: {
     color: "white",
     background: "#98CDFD",
@@ -78,19 +90,29 @@ const DangerTheme = {
 }
 
 const Themes = {
+  disabled: DisableTheme, //disable.
+  primary: PrimaryTheme, //Indicates the primary action.
+  secondary: SecondaryTheme, //Indicates an important action.
+  danger: DangerTheme //Indicates a dangerous or negative action.
+};
+
+const ThemesEnum = {
+  disabled: "disabled",
+  primary: "primary",
+  secondary: "secondary",
+  danger: "danger"
+}
+
+export const getThemes = (styleLayout: "core" | "sensitive" | "bullet") => {
+  const themes = {
     disabled: DisableTheme, //disable.
-    primary: PrimaryTheme, //Indicates the primary action.
+    primary: { ...PrimaryTheme, layout: LayoutStyleType[styleLayout] }, //Indicates the primary action.
     secondary: SecondaryTheme, //Indicates an important action.
     danger: DangerTheme //Indicates a dangerous or negative action.
   };
+  return themes;
+}
 
-  const ThemesEnum = {
-    disabled: "disabled",
-    primary: "primary",
-    secondary: "secondary",
-    danger: "danger"
-  }
-  
 export { ThemesEnum };
 
 export default Themes;

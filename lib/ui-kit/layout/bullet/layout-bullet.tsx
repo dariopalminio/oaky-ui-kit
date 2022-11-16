@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { LayoutContext } from "../layout-context-provider";
 import { ILayoutContext } from "../types";
-
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 //Styled-components
 const LayoutContainer = styled.div`
@@ -23,7 +23,7 @@ interface OpenConditionalProps {
 const SideBarLeft = styled.div`
     position: absolute;
     height: 95vh;
-    width: 4rem;
+    width: 200px;
     left: 0;
     z-index: 1;
     overflow-x: hidden;
@@ -32,7 +32,25 @@ const SideBarLeft = styled.div`
     box-sizing:border-box;
     `;
 
-    const MainSection = styled.section<OpenConditionalProps>`
+interface BulletSideBarProps {
+    readonly isOpen: boolean;
+}
+
+const BulletSideBar = styled.div<BulletSideBarProps>`
+    position: absolute;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    top: 70px;
+    left: ${(props) => (props.isOpen ? "230px" : "4px")};
+    border: 1px solid grey;
+    border-radius: 50%;
+    background: white;
+    transition: 0.4s;
+    z-index: 1000;
+`;
+
+const MainSection = styled.section<OpenConditionalProps>`
     position: relative;
     width: calc(100% - ${props => props.dynamicWidth}px);
     float: right;
@@ -61,7 +79,7 @@ interface Props {
  * 
  * Patterns: Render Prop, Presentation Component and Context Provider
  */
-const LayoutSecondary: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
+const LayoutBullet: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const { sidebarWidth,
         isSidebarOpen,
         toggleSidebar, setSidebarWidth } = useContext(LayoutContext) as ILayoutContext;
@@ -69,35 +87,28 @@ const LayoutSecondary: React.FC<Props> = ({ topbar, leftbar, footer, children })
     const theme: any = useTheme();
 
     useEffect(() => {
-        setSidebarWidth( theme['secondary'].layout.sidebarWidthMin);
-        if (isSidebarOpen) toggleSidebar('secondary');
+        setSidebarWidth(theme['primary'].layout.sidebarWidthMin);
+        if (isSidebarOpen) toggleSidebar();
     }, []);
 
-        
-    const handleOpen = () => {
-        if (!isSidebarOpen) toggleSidebar('secondary');
-    };
-
-    const handleClose = () => {
-        if (isSidebarOpen) toggleSidebar('secondary');
-    };
-
-    
     return (
         <LayoutContainer>
             <Header>
                 {topbar}
             </Header>
-            <SideBarLeft
-                style={{ width: sidebarWidth }}
-                onMouseEnter={() => handleOpen()}
-                onMouseLeave={() => handleClose()}
-            >
+            <BulletSideBar isOpen={isSidebarOpen} onClick={toggleSidebar}> 
+                {isSidebarOpen
+                    ?
+                    <RiArrowLeftSLine style={{ marginTop: "1px", marginLeft: "1px" }} />
+                    :
+                    <RiArrowRightSLine style={{ marginTop: "1px", marginLeft: "1px"  }} />}
+            </BulletSideBar>
+            <SideBarLeft style={{ width: sidebarWidth }}>
                 {leftbar}
             </SideBarLeft>
 
             <MainSection dynamicWidth={sidebarWidth}>
-            <ContentSection>
+                <ContentSection>
                     {children}
                 </ContentSection>
                 <FooterSection>
@@ -108,4 +119,4 @@ const LayoutSecondary: React.FC<Props> = ({ topbar, leftbar, footer, children })
     );
 };
 
-export default LayoutSecondary;
+export default LayoutBullet;
