@@ -5,7 +5,7 @@ import { ILayoutContext } from "./types";
 
 
 // Initial values for global user context 
-export const ILayoutContextDefaultValues: ILayoutContext = {
+export const LayoutContextDefaultValues: ILayoutContext = {
     sidebarWidth: 0,
     isSidebarOpen: false,
     toggleSidebar: () => { },
@@ -13,7 +13,7 @@ export const ILayoutContextDefaultValues: ILayoutContext = {
 };
 
 // Global cart context
-export const LayoutContext = createContext<ILayoutContext>(ILayoutContextDefaultValues);
+export const LayoutContext = createContext<ILayoutContext>(LayoutContextDefaultValues);
 
 interface Props {
     children?: React.ReactNode;
