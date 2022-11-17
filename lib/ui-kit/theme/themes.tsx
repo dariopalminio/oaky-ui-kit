@@ -6,6 +6,7 @@ export const ThemesEnum = {
   neutral: "neutral",
   dark: "dark",
   hover: "hover",
+  text: "hover",
 }
 
 const LayoutStyleType = {
