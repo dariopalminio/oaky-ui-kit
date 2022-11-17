@@ -72,7 +72,7 @@ const ColorsPalette = {
       lighter:  "white",
       darkened: "black",
     },
-    info: '#42bdff',
+    info: '#81C1DF',
     success: '#12DBAD',
     warning: '#EBC60C',
     error: '#FB5F57',
