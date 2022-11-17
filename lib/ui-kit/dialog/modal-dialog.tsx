@@ -1,7 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import "./modal-dialog.css";
+
+const StylesToModal = styled.div`
+    .modal-paper {
+        z-index: 999;
+        background: white;
+        position: relative;
+        margin: 5rem auto;
+        border-radius: 3px;
+        max-width: 500px;
+        padding: 2rem;
+    }
+    
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1040;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: .5;
+    }
+    
+    .modal-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        outline: 0;
+        border-radius: 10px;
+    }
+`;
 
 const ModalHeader = styled.div`
     display: flex;
@@ -15,7 +50,7 @@ const ModalCloseButton = styled.button`
     top: 15px;
     width: 30px;
     height: 30px;
-    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    background: ${props => props.theme.color['primary'].base}; 
     border: 0px;
     color: #fff;
     font-size: 25px;
@@ -62,6 +97,7 @@ const ModalDialog: React.FC<Props> = ({ isOpen, onClose, children, style }) => {
 
     return isOpen ? ReactDOM.createPortal(
         <React.Fragment>
+            <StylesToModal>
             <div className="modal-overlay" />
             <div className="modal-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
                 <div className="modal-paper">
@@ -76,6 +112,7 @@ const ModalDialog: React.FC<Props> = ({ isOpen, onClose, children, style }) => {
                     {children}
                 </div>
             </div>
+            </StylesToModal>
         </React.Fragment>, document.body
     ) : null
 };
