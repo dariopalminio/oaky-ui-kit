@@ -10,10 +10,10 @@ import { ILayoutContext } from "../types";
 const LayoutContainer = styled.div`
         width: 100%;
     `;
-
+//theme.layout['core'].sidebarWidthMax
 const Header = styled.div`
         position: relative;
-        height: ${props => props.theme["primary"].layout.headerHeight}px;
+        height: ${props => props.theme.layout.headerHeight}px;
         width: 100%;
     `;
 
@@ -41,7 +41,7 @@ const HeaderLeft = styled.div<OpenConditionalProps>`
         display: ${(props) => (props.isOpen ? "flex" : "none")};
         align-items: center;
         justify-content: flex-start;
-        height: ${props => props.theme["primary"].layout.headerHeight}px;
+        height: ${props => props.theme.layout.headerHeight}px;
         width:  ${props => props.dynamicWidth}px;
         float: left;
     `;
@@ -49,7 +49,7 @@ const HeaderLeft = styled.div<OpenConditionalProps>`
 //Styled-components Using custom props named dynamicWidth
 const HeaderRight = styled.div<OpenConditionalProps>`
         position: relative;
-        height: ${props => props.theme["primary"].layout.headerHeight}px;
+        height: ${props => props.theme.layout.headerHeight}px;
         width: calc(100% - ${props => props.dynamicWidth}px);
         float: left;
     `;
@@ -60,7 +60,7 @@ const SideBarLeft = styled.div<OpenConditionalProps>`
         background: #F9F9F9;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         display: ${(props) => (props.isOpen ? "active" : "none")};
-        height: calc(100vh - ${props => props.theme["primary"].layout.headerHeight}px);
+        height: calc(100vh - ${props => props.theme.layout.headerHeight}px);
         width: ${props => props.dynamicWidth}px;
         float: left;
         z-index: 2;
@@ -93,7 +93,7 @@ const LayoutCore: React.FC<Props> = ({ topbar, leftbar, footer, children }) => {
     const theme: any = useTheme();
 
     useEffect(() => {
-        setSidebarWidth(theme['primary'].layout.sidebarWidthMin);
+        setSidebarWidth(theme.layout.sidebarWidthMin);
         if (isSidebarOpen) toggleSidebar();
     }, []);
 

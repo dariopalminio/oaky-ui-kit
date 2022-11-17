@@ -48,7 +48,7 @@ const StepLabel = styled.p<CheckedProps>`
     font-size: small;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: ${(props) => (props.isChecked ? "green" : "grey")};
+    color: black;
     width: 100%;
 `;
 

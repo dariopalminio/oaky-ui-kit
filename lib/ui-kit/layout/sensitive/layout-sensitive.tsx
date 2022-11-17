@@ -69,7 +69,7 @@ const LayoutSensitive: React.FC<Props> = ({ topbar, leftbar, footer, children })
     const theme: any = useTheme();
 
     useEffect(() => {
-        setSidebarWidth( theme['primary'].layout.sidebarWidthMin);
+        setSidebarWidth( theme.layout.sidebarWidthMin);
         if (isSidebarOpen) toggleSidebar();
     }, []);
 

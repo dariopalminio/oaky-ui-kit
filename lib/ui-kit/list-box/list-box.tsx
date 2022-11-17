@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const SelectGroupContainer = styled.div`
-    color: #333;
+    color: black;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 20px;

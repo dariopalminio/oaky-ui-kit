@@ -31,12 +31,13 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
 
 .span_radio:hover,
 .input_radio_button[type="radio"]:checked + span{
-    background: ${props => props.theme["primary"].color.backgroundHover};
+    color: ${props => props.theme.color['text'].darkened};
+    background: ${props => props.theme.color['hover'].lighter};
 }
 
 .span_radio:before{
     content: "";
-    background-color: white;
+    background-color: ${props => props.theme.color['text'].lighter};
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -46,12 +47,13 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
 }
 
 .input_radio_button[type="radio"]:checked + span:before{
-    background: ${props => props.theme[props.styleType].button.background};
+    color: ${props => props.theme.color['text'].darkened};
+    background: ${props => props.theme.color['hover'].lighter};
 }
 `
 
 const SelectListGroup = styled.div`
-    color: #333;
+    color: ${props => props.theme.color['text'].darkened};
     float: left;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 13px;

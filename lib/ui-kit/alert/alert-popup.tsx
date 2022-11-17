@@ -37,7 +37,7 @@ const ParagraphTextMsg = styled.p`
     display: flex;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: ${props => props.theme.color['text'].lighter};
 `;
 
 const ButtonPopupClose = styled.button`
@@ -89,13 +89,13 @@ const AlertPopup: React.FC<Props> = ({ severity, children, toggle, style }) => {
     const getBackgroundBySeverity = () => {
         switch (severity) {
             case 'success':
-                return theme["primary"].color.success;
+                return theme.color.success;
             case 'error':
-                return theme["primary"].color.error;
+                return theme.color.error;
             case 'info':
-                return theme["primary"].color.info;
+                return theme.color.info;
             case 'warning':
-                return theme["primary"].color.warning;
+                return theme.color.warning;
             default:
                 return '#42bdff';
         }

@@ -1,3 +1,3 @@
-export { default as Themes } from './themes'
+export { default as ThemeCore } from './themes'
 export { ThemesEnum } from './themes'
-export { getThemes } from './themes'
+export { getTheme } from './themes'

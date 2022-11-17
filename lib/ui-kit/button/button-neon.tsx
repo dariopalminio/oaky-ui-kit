@@ -9,9 +9,9 @@ interface ButtonProps {
 };
 
 //Styled-components
-const ButtonWithShadow = styled.button<ButtonProps>`
+const GradientButton = styled.button<ButtonProps>`
         color: ${props => props.theme.color['text'].lighter};
-        background: ${props => props.theme.color[props.styleType].base}; 
+        background: linear-gradient(45deg, ${props => props.theme.color[props.styleType].base} 30%, ${props => props.theme.color[props.styleType].lighter} 90%); 
         box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         overflow: hidden;
@@ -28,8 +28,12 @@ const ButtonWithShadow = styled.button<ButtonProps>`
           }
         &:hover{
             color: ${props => props.theme.color['text'].darkened};
-            background: ${props => props.theme.color[props.styleType].lighter}; 
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            transform: translate(0, 0);
+            background: linear-gradient(45deg, ${props => props.theme.color[props.styleType].lighter} 30%, ${props => props.theme.color[props.styleType].base} 90%); 
+            box-shadow: 8px -8px 20px 0 rgba(16, 226, 256, 0.5), -8px 8px 20px 0 rgba(183, 0, 255, 0.7);
+            &:after {
+                transform: rotate(150deg);
+              }
           }
         &:active {
             background: white;
@@ -63,7 +67,7 @@ interface Props {
  * Customized button
  * Stateless components and controlled component
  */
-const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
+const ButtonNeon: React.FC<Props> = ({ children, onClick, type, style, disabled, styleType }) => {
 
     const getStyleType = () => {
         if (!styleType || styleType === undefined || styleType === null) {
@@ -86,7 +90,7 @@ const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, sty
             )}
 
             {(!disabled && type) && (
-                <ButtonWithShadow styleType={getStyleType()}
+                <GradientButton styleType={getStyleType()}
                     onClick={onClick}
                     type={type}
                     {...(style &&
@@ -94,19 +98,19 @@ const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, sty
                     )}
                 >
                     {children}
-                </ButtonWithShadow>
+                </GradientButton>
             )}
 
             {(!disabled && !type) && (
-                <ButtonWithShadow styleType={getStyleType()}
+                <GradientButton styleType={getStyleType()}
                     onClick={onClick}
                     style={style ? style : {}}
                 >
                     {children}
-                </ButtonWithShadow>
+                </GradientButton>
             )}
         </>
     );
 };
 
-export default Button;
+export default ButtonNeon;

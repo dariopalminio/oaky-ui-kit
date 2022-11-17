@@ -4,12 +4,12 @@ import { MenuItemType } from '../types';
 
 //.contenedor-menu .menu li a
 const AcordeonMenuItemType = styled.li`
-    color: black;
+    color: ${props => props.theme.color['text'].base};
     display: block;
     padding: 12px 0px 12px 15px;
     &:hover {
         color: black;
-        background: ${props => props.theme["primary"].color.backgroundHover};
+        background: ${props => props.theme.color['hover'].lighter};
     }
 `;
 
@@ -18,11 +18,11 @@ const SubMenuItemType = styled.li`
     align-items: center;
     padding: 12px 0px 12px 15px;
     margin-left: 10px;
-    color: black;
+    color: ${props => props.theme.color['text'].base};
     transition: all 0.4s ease-out;
     &:hover {
-        color: black;
-        background: ${props => props.theme["primary"].color.backgroundHover};
+        color: ${props => props.theme.color['text'].darkened};
+        background: ${props => props.theme.color['hover'].lighter};
     }
 `;
 
@@ -34,7 +34,7 @@ const MenuItemContainerType = styled.ul`
 
 const AnchorLink = styled.a`
     text-decoration:none;
-    color: black;
+    color: ${props => props.theme.color['text'].base};
 `;
 
 interface Props {

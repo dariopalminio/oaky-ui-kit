@@ -4,9 +4,9 @@ export const PaperWrapper = styled.div`
     width: fit-content;
     max-width: 1000px;
     height: fit-content;
-    border: ${props => props.theme["primary"].paper.border};
+    border: ${props => props.theme.color['neutral'].darkened};
     border-radius: 10px;
-    box-shadow: ${props => props.theme["primary"].paper.boxShadow};
+    box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
     margin-top: 10px;
     margin-left: 10px;
     padding: 23px;

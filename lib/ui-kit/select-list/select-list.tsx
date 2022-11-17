@@ -3,7 +3,7 @@ import { RiDeleteBin7Fill } from "react-icons/ri";
 import styled from "styled-components";
 
 const SelectListGroup = styled.div`
-    color: #333;
+    color: ${props => props.theme.color['text'].darkened};
     float: left;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -36,7 +36,8 @@ const UlSelectList = styled.ul`
         line-height: 33px;
         width: 98%;
         &:hover {
-            background: ${props => props.theme["primary"].color.backgroundHover};
+            color: black;
+            background: ${props => props.theme.color['hover'].lighter};
         }
     }
 `;

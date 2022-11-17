@@ -9,8 +9,8 @@ const Topbar = styled.div`
   position: relative;
   display: flex; 
   align-items: center;
-  background-image: ${props => props.theme['primary'].layout.headerBackgroundImage};
-  height: ${props => props.theme['primary'].layout.headerHeight}px;
+  background-image: ${props => props.theme.layout.headerBackgroundImage};
+  height: ${props => props.theme.layout.headerHeight}px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 `;
 

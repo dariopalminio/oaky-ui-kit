@@ -39,7 +39,7 @@ const CheckBoxSlideStyle = styled.div<PropsCheckBoxSlide>`
     transition: 0.3s;
   }
   #${props => props.id}btn-switch:checked~ .${props => props.id}lbl-switch {
-    background: ${props => props.theme["primary"].color.success};
+    background: ${props => props.theme.color.success};
   }
   #${props => props.id}btn-switch:checked~ .${props => props.id}lbl-switch:after {
     left: 28px;

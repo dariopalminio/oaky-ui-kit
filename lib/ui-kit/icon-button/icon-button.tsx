@@ -5,7 +5,7 @@ const CircularIconButton = styled.button`
     background-color: transparent;
     border: none;
     border-radius: 50%;
-    color: black;
+    color: ${props => props.theme.color['dark'].base};
     width: 34px;
     height: 34px;
     padding-top: 4px;

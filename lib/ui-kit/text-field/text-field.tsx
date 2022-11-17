@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const StylesTextField = styled.div`
     .input-text-field-group {
-        color: #333;
+        color: ${props => props.theme.color['text'].darkened};
         font-family: Helvetica, Arial, sans-serif;
         font-size: 13px;
         line-height: 20px;
@@ -41,7 +41,7 @@ export const StylesTextField = styled.div`
     }
 
     .error-message {
-        color: ${props => props.theme["primary"].color.error};
+        color: ${props => props.theme.color['danger'].base};
         display: inline-block;
         font-size: 12px;
         line-height: 15px;
@@ -53,18 +53,18 @@ export const StylesTextField = styled.div`
     }
     
     .error-text-field label {
-        color: ${props => props.theme["primary"].color.error};
+        color: ${props => props.theme.color['danger'].darkened};
     }
     
     .error-text-field input[type=text] {
         background-color: #fce4e4;
-        border: 1px solid ${props => props.theme["primary"].color.error};
+        border: 1px solid ${props => props.theme.color['danger'].darkened};
         outline: none;
     }
 
     .error-text-field input[type=password] {
         background-color: #fce4e4;
-        border: 1px solid ${props => props.theme["primary"].color.error};
+        border: 1px solid ${props => props.theme.color['danger'].darkened};
         outline: none;
     }
     

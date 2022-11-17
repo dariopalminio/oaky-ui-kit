@@ -47,7 +47,10 @@ const BulletSideBar = styled.div<BulletSideBarProps>`
     border-radius: 50%;
     background: white;
     transition: 0.4s;
-    z-index: 1000;
+    z-index: 2;
+    :hover {
+        background: ${props => props.theme.color['hover'].lighter};
+    }
 `;
 
 const MainSection = styled.section<OpenConditionalProps>`
@@ -87,7 +90,7 @@ const LayoutBullet: React.FC<Props> = ({ topbar, leftbar, footer, children }) =>
     const theme: any = useTheme();
 
     useEffect(() => {
-        setSidebarWidth(theme['primary'].layout.sidebarWidthMin);
+        setSidebarWidth(theme.layout.sidebarWidthMin);
         if (isSidebarOpen) toggleSidebar();
     }, []);
 
@@ -96,7 +99,7 @@ const LayoutBullet: React.FC<Props> = ({ topbar, leftbar, footer, children }) =>
             <Header>
                 {topbar}
             </Header>
-            <BulletSideBar isOpen={isSidebarOpen} onClick={toggleSidebar}> 
+            <BulletSideBar isOpen={isSidebarOpen} onClick={() => toggleSidebar()}> 
                 {isSidebarOpen
                     ?
                     <RiArrowLeftSLine style={{ marginTop: "1px", marginLeft: "1px" }} />

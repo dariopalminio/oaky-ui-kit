@@ -25,6 +25,7 @@ const CircularAnimation = styled.div`
 
 const LabelProgress = styled.div`
   margin: 0px auto;
+  color: ${props => props.theme.color['text'].base};
 `;
 
 interface Props {

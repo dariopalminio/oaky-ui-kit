@@ -27,7 +27,7 @@ const StylesMenuListFloat = styled.div`
 
     .menu_float_items .menu_float_link {
         display: block;
-        color: #727272;
+        color: ${props => props.theme.color['dark'].base};
         margin-left: 0px;
         padding: 12px 0px 12px 15px;
         transition: all 0.4s ease-out;
@@ -35,9 +35,9 @@ const StylesMenuListFloat = styled.div`
     }
 
     .menu_float_items:hover .menu_float_link:hover {
-        background: ${props => props.theme["primary"].color.backgroundHover};
+        color: color: ${props => props.theme.color['text'].darkened};
+        background: ${props => props.theme.color['hover'].lighter};
         border-radius: 5px;
-        color: black;
     }
 `;
 

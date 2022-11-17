@@ -19,30 +19,30 @@ interface InputQtyProps {
 
 
 const InputQtyPlus = styled.input<InputQtyProps>`
-    color: ${props => props.theme[props.styleType].button.color};
+    color: ${props => props.theme.color['text'].lighter};
     width: 30px;
     height: 30px;
-    background: ${props => props.theme[props.styleType].button.background};
+    background: ${props => props.theme.color[props.styleType].base}; 
     border: 0px;
     cursor: pointer;
     &:hover {
-    transform: translate(0, 0);
-      background: ${props => props.theme[props.styleType].button.hoverBackground};
-      box-shadow: ${props => props.theme[props.styleType].button.hoverBoxShadow};
+        color: ${props => props.theme.color['text'].darkened};
+        background: ${props => props.theme.color[props.styleType].lighter}; 
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     }
   `;
 
 const InputQtyMinus = styled.input<InputQtyProps>`
-    color: ${props => props.theme[props.styleType].button.color};
+    color: ${props => props.theme.color['text'].lighter};
     width: 30px;
     height: 30px;
-    background: ${props => props.theme[props.styleType].button.background};
+    background: ${props => props.theme.color[props.styleType].base}; 
     border: 0px;
     cursor: pointer;
     &:hover {
-      transform: translate(0, 0);
-      background: ${props => props.theme[props.styleType].button.hoverBackground};
-      box-shadow: ${props => props.theme[props.styleType].button.hoverBoxShadow};
+        color: ${props => props.theme.color['text'].darkened};
+        background: ${props => props.theme.color[props.styleType].lighter}; 
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     }
   `;
 
