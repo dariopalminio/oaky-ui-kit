@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import NoImage from "./no_image.png";
 
 const ImgCarouselContainer = styled.div`
@@ -95,7 +95,8 @@ const ImgCarousel: React.FC<Props> = ({ uniqueId, images, width, height }) => {
     const [selected, setSelected] = useState(0); //Index of selected image at front
     const zIndexUp = 4; //Image in front has maximum zindex
     const zIndexDown = 3; //Image behind has lower zindex
-
+    const theme: any = useTheme();
+    
     const selectImage = (index: number) => {
         setSelected(index);
     }
@@ -116,7 +117,7 @@ const ImgCarousel: React.FC<Props> = ({ uniqueId, images, width, height }) => {
             <ImgCarouselMenu>
                 {images.map((image, index) => {
                     const referenceName = `imgcarousel-slide-${uniqueId}-${index}`;
-                    const cyecleColor =  (selected === index) ? "#31C4F3" : "grey";
+                    const cyecleColor =  (selected === index) ? theme.color['primary'].base : "grey";
                     return (
                         <LabelCyrcle key={index.toString()} htmlFor={referenceName} style={{background: cyecleColor}}/>
                     );
