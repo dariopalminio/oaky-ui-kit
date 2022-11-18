@@ -37,8 +37,7 @@ const ButtonWithShadow = styled.button<ButtonProps>`
         }
         `;
 
-//Styled-components
-const GradientButtonDisabled = styled.button`
+const ButtonDisabled = styled.button`
         color: rgb(255, 255, 255);
         background: linear-gradient(45deg, #8a8a8a 30%, #bebebe 90%);
         opacity: 0.5;
@@ -56,7 +55,7 @@ interface Props {
     type?: "button" | "submit" | "reset" | undefined;
     style?: any;
     disabled?: boolean,
-    styleType?: "disabled" | "primary" | "secondary" | "danger";
+    styleType?: "warning" | "info" | "success" | "neutral" |"disabled" | "primary" | "secondary" | "danger";
 }
 
 /**
@@ -69,7 +68,7 @@ const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, sty
         if (!styleType || styleType === undefined || styleType === null) {
             return ThemesEnum.primary;
         }
-        const st = styleType ? styleType : ThemesEnum.primary;
+        const st = styleType ? styleType : "primary";
         const arr: string[] = Object.keys(ThemesEnum);
         if (arr.includes(st)) return st;
         return ThemesEnum.primary;
@@ -78,11 +77,9 @@ const Button: React.FC<Props> = ({ children, onClick, type, style, disabled, sty
     return (
         <>
             {disabled && (
-                <GradientButtonDisabled
-                    disabled
-                >
+                <ButtonDisabled disabled>
                     {children}
-                </GradientButtonDisabled>
+                </ButtonDisabled>
             )}
 
             {(!disabled && type) && (

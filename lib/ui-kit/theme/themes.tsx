@@ -7,6 +7,9 @@ export const ThemesEnum = {
   dark: "dark",
   hover: "hover",
   text: "hover",
+  success: "success",
+  info: "success",
+  warning: "success"
 }
 
 const LayoutStyleType = {
@@ -59,8 +62,8 @@ const ColorsPalette = {
     },
     disabled: {
       base: "#D7D7D7",
-      lighter: "#F5F5F5",
-      darkened: "#CACACA",
+      lighter: "#D7D7D7",
+      darkened: "#D7D7D7",
     },
     hover: {
       base: "#CFE0EE",
@@ -79,23 +82,23 @@ const ColorsPalette = {
     },
     success: {
       base: '#12DBAD',
-      lighter: '#12DBAD',
-      darkened: '#12DBAD',
+      lighter: '#53FFD8',
+      darkened: '#00C396',
     },
     warning: {
       base: '#EBC60C',
-      lighter:'#EBC60C',
-      darkened: '#EBC60C',
+      lighter:'#FCDE47',
+      darkened: '#D6B300',
     },
     error: {
       base: '#FB5F57',
-      lighter: '#FB5F57',
-      darkened: '#FB5F57',
+      lighter: '#FF7E77',
+      darkened: '#FD382E',
     },
     shadow: {
       base: '#aaa',
-      lighter: '#aaa',
-      darkened: '#aaa',
+      lighter: '#C6C6C6',
+      darkened: '#989797',
     }
   }
 }
