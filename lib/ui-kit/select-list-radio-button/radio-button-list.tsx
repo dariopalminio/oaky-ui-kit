@@ -5,6 +5,7 @@ import { ThemesEnum } from "../theme/themes";
 //Custom props for attaching additional props to Styled-components
 interface RadioButtonProps {
     readonly styleType: string;
+    readonly circular: boolean;
 };
 
 const StylesRadioButton = styled.div<RadioButtonProps>`
@@ -25,14 +26,17 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
     display: inline-flex;
     align-items: left;
     padding: 2px 2px 2px 2px;
-    border-radius: 31px;
+    border-radius: ${props => props.circular ? '31px' : '2px'};
     transition: .25s ease;
 }
 
-.span_radio:hover,
+.span_radio:hover {
+    background: ${props => props.theme.color['hover'].lighter};
+}
+
 .input_radio_button[type="radio"]:checked + span{
     color: ${props => props.theme.color['text'].darkened};
-    background: ${props => props.theme.color['hover'].lighter};
+    background: ${props => props.theme.color['neutral'].lighter};
 }
 
 .span_radio:before{
@@ -40,7 +44,7 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
     background-color: ${props => props.theme.color['text'].lighter};
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: ${props => props.circular ? '50%' : '2px'};
     margin-right: 5px;
     transition: .25s ease;
     box-shadow:  inset 0 0 0 2px grey;
@@ -85,13 +89,14 @@ interface Props {
     style?: any;
     list: string[];
     styleType?: "disabled" | "primary" | "secondary" | "danger";
+    circular?: boolean;
 }
 
 /**
  * Select List with Radio Buttons component is used for collecting one data user provided information from a list of options.
  * Stateless components, extensible Style and controlled component
  */
-const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, currentSelected=-1, styleType, style }) => {
+const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, currentSelected=-1, styleType, circular=true,style }) => {
 
 
     const selectItem = (item: string, index: number) => {
@@ -119,7 +124,7 @@ const RadioButtonList: React.FC<Props> = ({ id, label, list, onClickSelect, curr
      }
      
     return (
-        <StylesRadioButton styleType={getStyleType()}>
+        <StylesRadioButton styleType={getStyleType()} circular={circular}>
         <SelectListGroup>
             {label && <LabelSelectList style={!thereIsSomeSelected()? {color: "#cc0033"} : {}}>{label}</LabelSelectList>}
             <RadioButtonsWrapper>

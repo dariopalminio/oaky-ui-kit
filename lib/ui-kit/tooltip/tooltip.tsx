@@ -41,6 +41,7 @@ interface IProps {
 
 const Tooltip: React.FC<IProps> = (props: IProps) => {
     const [open, setOpen] = useState(false);
+    
     const toggle = () => {
         setOpen(!open);
     };

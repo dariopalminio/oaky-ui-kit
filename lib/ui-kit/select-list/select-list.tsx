@@ -1,6 +1,6 @@
 import React from "react";
 import { RiDeleteBin7Fill } from "react-icons/ri";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 const SelectListGroup = styled.div`
     color: ${props => props.theme.color['text'].darkened};
@@ -76,7 +76,7 @@ interface Props {
  * Stateless components, extensible Style and controlled component
  */
 const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDelete, currentSelected, withDelete, style }) => {
-
+    const theme: any = useTheme();
 
     const selectItem = (item: string, index: number) => {
         onClickSelect && onClickSelect(item, index);
@@ -92,7 +92,7 @@ const SelectList: React.FC<Props> = ({ id, label, list, onClickSelect, onClickDe
 
     const getBackgroundIfSelected = (index: number) => {
         if (isSelected(index)) {
-            return { background: "#F1F1F1" };
+            return { background: theme.color['neutral'].lighter };
         }
         return {};
     }
