@@ -40,7 +40,7 @@ export const SelectOptionsStyles = styled.div`
 const SelectGroupContainer = styled.div`
     display: block;
     color: #333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: ${props => props.theme.font.primary};
     font-size: 13px;
     line-height: 20px;
     width: 100%;

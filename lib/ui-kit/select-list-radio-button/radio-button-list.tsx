@@ -48,14 +48,14 @@ const StylesRadioButton = styled.div<RadioButtonProps>`
 
 .input_radio_button[type="radio"]:checked + span:before{
     color: ${props => props.theme.color['text'].darkened};
-    background: ${props => props.theme.color['hover'].lighter};
+    background: ${props => props.theme.color['success'].base};
 }
 `
 
 const SelectListGroup = styled.div`
     color: ${props => props.theme.color['text'].darkened};
     float: left;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: ${props => props.theme.font.primary};
     font-size: 13px;
     line-height: 20px;
     width: 100%;

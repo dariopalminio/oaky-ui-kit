@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SelectGroupContainer = styled.div`
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: ${props => props.theme.font.primary};
     font-size: 13px;
     line-height: 20px;
     margin: 0 5px 5px 5px;/*superior, derecho, inferior e izquierdo*/

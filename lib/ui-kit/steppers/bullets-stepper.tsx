@@ -47,7 +47,7 @@ const StepLabel = styled.p<CheckedProps>`
     display: inline-block;
     font-size: small;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: ${props => props.theme.font.primary};
     color: black;
     width: 100%;
 `;

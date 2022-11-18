@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StylesTextField = styled.div`
     .input-text-field-group {
         color: ${props => props.theme.color['text'].darkened};
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: ${props => props.theme.font.primary};
         font-size: 13px;
         line-height: 20px;
         margin: 0px;

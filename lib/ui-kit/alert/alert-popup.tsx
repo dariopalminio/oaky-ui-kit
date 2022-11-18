@@ -89,13 +89,13 @@ const AlertPopup: React.FC<Props> = ({ severity, children, toggle, style }) => {
     const getBackgroundBySeverity = () => {
         switch (severity) {
             case 'success':
-                return theme.color.success;
+                return theme.color['success'].base;
             case 'error':
-                return theme.color.error;
+                return theme.color['error'].base;
             case 'info':
-                return theme.color.info;
+                return theme.color['info'].base;
             case 'warning':
-                return theme.color.warning;
+                return theme.color['warning'].base;
             default:
                 return '#42bdff';
         }

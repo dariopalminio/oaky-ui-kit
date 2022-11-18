@@ -10,8 +10,8 @@ const CircularProgressContainer = styled.div`
 `;
 
 const CircularAnimation = styled.div`
-  border: 4px solid #aee0f7; 
-  border-top: 4px solid #e676dc;
+  border: 4px solid ${props => props.theme.color['secondary'].lighter}; 
+  border-top: 4px solid ${props => props.theme.color['primary'].lighter};
   border-radius: 50%;
   width: 50px;
   height: 50px;

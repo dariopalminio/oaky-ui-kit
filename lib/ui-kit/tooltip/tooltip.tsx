@@ -5,7 +5,7 @@ const SpanTooltip = styled.span`
     display: block;
     font-size: 14px;
     background-color: white;
-    color: ${props => props.theme.color['neutral'].darkened};
+    color: ${props => props.theme.color['secondary'].darkened};
     border: 1px solid ${props => props.theme.color['neutral'].darkened};
     border-radius: 5px;
     left: 30%;

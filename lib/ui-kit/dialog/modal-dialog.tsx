@@ -58,12 +58,15 @@ const ModalCloseButton = styled.button`
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
+    &:hover {
+        background: ${props => props.theme.color['primary'].lighter};
+    }
 `;
 
 const ModalCross = styled.span`
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 1px;
+    top: -2px;
     margin-top: 0;
     margin-left: 0;
     width: 30px;

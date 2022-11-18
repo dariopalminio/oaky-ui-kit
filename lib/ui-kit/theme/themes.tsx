@@ -33,14 +33,14 @@ const LayoutStyleType = {
 const ColorsPalette = {
   "core": {
     primary: {
+      base: "#007CF0",
+      lighter: "#3DA2FF",
+      darkened: "#0069CB",
+    },
+    secondary: {
       base: "#27C8FF", //base blue-light RGB 39, 200, 255
       lighter: "#C0ECFB", //RGB 192, 236, 251 
       darkened: "#00ACE7", //RGB 0, 172, 231 
-    },
-    secondary: {
-      base: "#FE6B8B",
-      lighter: "#FFA3B7",
-      darkened: "#FF3964",
     },
     danger: {
       base: "#FA3867",
@@ -59,32 +59,55 @@ const ColorsPalette = {
     },
     disabled: {
       base: "#D7D7D7",
-      lighter:  "#F5F5F5",
+      lighter: "#F5F5F5",
       darkened: "#CACACA",
     },
     hover: {
       base: "#CFE0EE",
-      lighter:  "#CFE0EE",
+      lighter: "#CFE0EE",
       darkened: "#CFE0EE",
     },
     text: {
       base: "black",
-      lighter:  "white",
+      lighter: "white",
       darkened: "black",
     },
-    info: '#81C1DF',
-    success: '#12DBAD',
-    warning: '#EBC60C',
-    error: '#FB5F57',
-    shadow: '#aaa',
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    info: {
+      base: '#81C1DF',
+      lighter: '#81C1DF',
+      darkened: '#81C1DF',
+    },
+    success: {
+      base: '#12DBAD',
+      lighter: '#12DBAD',
+      darkened: '#12DBAD',
+    },
+    warning: {
+      base: '#EBC60C',
+      lighter:'#EBC60C',
+      darkened: '#EBC60C',
+    },
+    error: {
+      base: '#FB5F57',
+      lighter: '#FB5F57',
+      darkened: '#FB5F57',
+    },
+    shadow: {
+      base: '#aaa',
+      lighter: '#aaa',
+      darkened: '#aaa',
+    }
   }
 }
 
 //theme.layout['core'].sidebarWidthMax
 const ThemeCore = {
   layout: LayoutStyleType.core,
-  color: ColorsPalette.core
+  color: ColorsPalette.core,
+  font: {
+      primary: `Helvetica, Arial, sans-serif`,
+      secondary: `Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif`
+  }
 };
 
 export const getTheme = (styleLayout: string) => {
@@ -99,7 +122,7 @@ export const getTheme = (styleLayout: string) => {
     default:
       throw new Error('Layout dos not exist!');;
   }
-  
+
 }
 
 export default ThemeCore;

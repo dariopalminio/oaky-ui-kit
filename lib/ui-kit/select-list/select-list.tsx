@@ -5,7 +5,7 @@ import styled from "styled-components";
 const SelectListGroup = styled.div`
     color: ${props => props.theme.color['text'].darkened};
     float: left;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: ${props => props.theme.font.primary};
     font-size: 13px;
     line-height: 20px;
     width: 100%;
@@ -30,7 +30,7 @@ const UlSelectList = styled.ul`
         text-align: left;
         background: white;
         border-top: #C5C6C7 solid 1px;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: ${props => props.theme.font.primary};
         font-size: 13px;
         height: 33px;
         line-height: 33px;
