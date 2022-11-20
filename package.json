@@ -1,5 +1,5 @@
 {
-  "name": "daro-ui-kit",
+  "name": "oaky-ui-kit",
   "private": true,
   "version": "1.11.0",
   "author": "Dario Palminio",
@@ -36,13 +36,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/daro-ui-kit.umd.js",
-  "module": "./dist/daro-ui-kit.es.js",
+  "main": "./dist/oaky-ui-kit.umd.js",
+  "module": "./dist/oaky-ui-kit.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/daro-ui-kit.es.js",
-      "require": "./dist/daro-ui-kit.umd.js"
+      "import": "./dist/oaky-ui-kit.es.js",
+      "require": "./dist/oaky-ui-kit.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   }

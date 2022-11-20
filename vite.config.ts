@@ -16,7 +16,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'lib/index.ts'),
             name: 'DaroUIKit',
             formats: ['es', 'umd'],
-            fileName: (format) => `daro-ui-kit.${format}.js`,
+            fileName: (format) => `oaky-ui-kit.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'styled-components'],

@@ -1,4 +1,4 @@
-# daro-ui-kit
+# oaky-ui-kit
 
 UI Kit with react, typescript, styled-components and CSS. This is a React Component Library generated with Vite.
 
@@ -33,22 +33,22 @@ Install lib in a folder parallel to your project folder.
 
 ```bash
 .
-└── daro-ui-kit # lib project containing dist folder or only dist folder
-├── daro-ui-kit-demo #consumer app (or other app)
+└── oaky-ui-kit # lib project containing dist folder or only dist folder
+├── oaky-ui-kit-demo #consumer app (or other app)
 
 ```
-Go daro-ui-kit/dist folder and use: npm link
-Go to the libconsumer (daro-ui-kit-demo) directory and run: npm link daro-ui-kit
+Go oaky-ui-kit/dist folder and use: npm link
+Go to the libconsumer (oaky-ui-kit-demo) directory and run: npm link oaky-ui-kit
 
 ## Use as libconsumer
 
 Install library:
 ```bash
-npm install daro-ui-kit
+npm install oaky-ui-kit
 ```
 
 ```bash
-import { Button } from "daro-ui-kit"
+import { Button } from "oaky-ui-kit"
 
 Use component from library:
 ...
