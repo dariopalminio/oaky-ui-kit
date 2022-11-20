@@ -1,28 +1,28 @@
 
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 const TableWrapper = styled.div`
-display: block;
-width: 100%;
-grid-template-columns: 1fr 5fr;
-background: #eeeeee;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: block;
+    width: 100%;
+    grid-template-columns: 1fr 5fr;
+    background: #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 `;
 
 const LabelRow = styled.div`
-background: #eeeeee;
-  width: 20%;
+    background: #eeeeee;
+    width: 20%;
 `;
 
 const ValueRow = styled.div`
-background: white;
-  width: 80%;
-  padding: 2px;
+    background: white;
+    width: 80%;
+    padding: 2px;
 `;
 
 const Row = styled.div`
     display: flex;
-    `;
+`;
 
 interface Props {
     style?: any;
@@ -34,9 +34,8 @@ interface Props {
  * Stateless components, extensible Style and controlled component
  */
 const SingleAttrTable: React.FC<Props> = ({ rowDictionary, style }) => {
-
-
-
+    const theme: any = useTheme();
+//${props => props.theme.color['neutral'].lighter}
     return (
         <TableWrapper>
             {rowDictionary.map((item, index) => {
@@ -46,7 +45,14 @@ const SingleAttrTable: React.FC<Props> = ({ rowDictionary, style }) => {
                     );
                 else
                     return (
-                        <Row key={index}> <LabelRow style={{ background: "#E0E0E0" }}>{item.label}</LabelRow><ValueRow style={{ background: "#f3f6f4" }}>{item.value}</ValueRow></Row>
+                        <Row key={index}>
+                            <LabelRow style={{ background: theme.color['neutral'].base }}>
+                                {item.label}
+                            </LabelRow>
+                            <ValueRow style={{ background: theme.color['neutral'].lighter }}>
+                                {item.value}
+                            </ValueRow>
+                        </Row>
                     );
             })}
 
