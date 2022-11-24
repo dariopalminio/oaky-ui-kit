@@ -40,7 +40,7 @@ const AnchorLink = styled.a`
 interface Props {
     onClick: (item: MenuItemType) => void;
     menuItem: MenuItemType;
-    isOpenSidebar?: boolean; 
+    isOpenSidebar?: boolean;
 }
 
 const AcordeonMenuItem: React.FC<Props> = ({ menuItem, onClick, isOpenSidebar }) => {
@@ -64,22 +64,25 @@ const AcordeonMenuItem: React.FC<Props> = ({ menuItem, onClick, isOpenSidebar })
             <AcordeonMenuItemType onClick={() => handleClickOpen()}>
                 <AnchorLink href="#" onClick={(e) => handleOnClickAnchorLink(e)}>
                     {menuItem.icon}&nbsp;
-                    { isOpenSidebar ? menuItem.title : null}
+                    {isOpenSidebar ? menuItem.title : null}
                 </AnchorLink>
             </AcordeonMenuItemType>
-            {menuItem?.submenu?.map((item, index) => {
-                if (open)
-                    return (
-                        <SubMenuItemType key={index} onClick={() => handleOnClickSubMenuItem(item)}>
-                            <AnchorLink href="#" onClick={(e) => handleOnClickAnchorLink(e)}>
-                           
-                                {item.icon}&nbsp;
-                                { isOpenSidebar ? item.title : null}
-                           
-                            </AnchorLink>
-                        </SubMenuItemType>
-                    );
-            })}
+            {open &&
+                menuItem?.submenu?.map(
+                    (item, index) => {
+                        return (
+                            <SubMenuItemType key={index} onClick={() => handleOnClickSubMenuItem(item)}>
+                                <AnchorLink href="#" onClick={(e) => handleOnClickAnchorLink(e)}>
+
+                                    {item.icon}&nbsp;
+                                    {isOpenSidebar ? item.title : null}
+
+                                </AnchorLink>
+                            </SubMenuItemType>
+                        );
+                    }
+                )
+            }
         </MenuItemContainerType>
     )
 }
