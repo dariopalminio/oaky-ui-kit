@@ -4,7 +4,7 @@
 
 UI Kit with react, typescript, styled-components and CSS. This is a React Component Library generated with Vite.
 
-This UI Kit contains the following Components: Alert, AlertPopup, Button, ButtonQuantity, CheckBoxSlide, ModalDialog, CenteringContainer, IconButton, ImgCarousel, LayoutCore, LayoutSensitive, LayoutBullet, ILayoutContext, LayoutContext, LayoutContextProvider, TopNavBar, Link, ListBox, MenuIconButton, MenuList, MenuListFloat, Paper, CircularProgress, SelectList, RadioButtonList, SelectOptions, BulletsStepper, LinksStepper, TextsStepper, SingleAttrTable, TextField, Themes, AcordeonMenuList, AcordeonMenuItem, Tooltip, TableGridSelectable, TableGrid
+This UI Kit contains the following Components: Alert, AlertPopup, Button, ButtonQuantity, CheckBoxSlide, ModalDialog, CenteringContainer, IconButton, ImgCarousel, LayoutCore, LayoutSensitive, LayoutBullet, ILayoutContext, LayoutContext, LayoutContextProvider, TopNavBar, Link, ListBox, MenuIconButton, MenuList, MenuListFloat, Paper, CircularProgress, SelectList, SplitableContainer, SplitLeft, SplitRight, SplitBar, RadioButtonList, SelectOptions, BulletsStepper, LinksStepper, TextsStepper, SingleAttrTable, TextField, Themes, AcordeonMenuList, AcordeonMenuItem, Tooltip, TableGridSelectable, TableGrid
 
 
 ## Code Project Installation
