@@ -5,7 +5,9 @@ const TableContainer = styled.div`
 
     background-color: white;
     width: 100%;
-
+    font-size: 12px;
+    font-family: ${props => props.theme.font.primary};
+    
     .table_row {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

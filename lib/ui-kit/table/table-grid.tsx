@@ -15,7 +15,8 @@ width: 100%;
     border: 1px solid #eee;
     color: #222;
     display: grid;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: ${props => props.theme.font.primary};
     grid-gap: 0;
     grid-template-columns: 100px 1fr;
     grid-template-rows: auto;
@@ -43,12 +44,11 @@ width: 100%;
     &-title{
         background-color: ${props => props.theme.color['secondary'].darkened};
         color: #fff;
-        font-size: .85em;
-        font-weight: 800;
+        font-weight: 600;
   
         .item-cell{
-            height: 40px;
-            padding: 4px 8px;
+            height: 45px;
+            padding: 0;
         }
     }
   
