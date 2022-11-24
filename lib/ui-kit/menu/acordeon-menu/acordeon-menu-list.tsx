@@ -20,6 +20,7 @@ const AcordeonMenuList: React.FC<Props> = ({ list, onClick, isOpenSidebar=true }
                 return (
                     <AcordeonMenuItem 
                     key={index} 
+                    level={1}
                     isOpenSidebar={isOpenSidebar}
                     menuItem={item} 
                     onClick={(item) => handleOnClickLink(item)} />
