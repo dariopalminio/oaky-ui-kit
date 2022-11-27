@@ -42,7 +42,7 @@ Install lib in a folder parallel to your project folder.
 Go oaky-ui-kit/dist folder and use: npm link
 Go to the libconsumer (oaky-ui-kit-demo) directory and run: npm link oaky-ui-kit
 
-## Use as libconsumer
+## Use as npm libconsumer
 
 Install library:
 ```bash
@@ -60,6 +60,37 @@ Text
 </Button>
 ...
 ```
+
+## Use as folder libconsumer
+
+Download or clone repository and copy lib folder into your project.
+
+```bash
+your_project
+└── lib # lib project containing lib folder of library
+├── pages > index # consumer
+
+```
+And use with imports.
+```bash
+//index.tsx
+import {Button, CenteringContainer, ThemeCore} from '../lib'
+
+export default function Home() {
+  return (
+   <ThemeProvider theme={ThemeCore}>
+     
+      <CenteringContainer>
+        <Button type="button" onClick={()=>{}} style={{ marginTop: "15px" }} styleType={"primary"}>
+          primary
+        </Button>
+      </CenteringContainer>
+
+    </ThemeProvider >
+  )
+}
+```
+
 
 ## References
 
