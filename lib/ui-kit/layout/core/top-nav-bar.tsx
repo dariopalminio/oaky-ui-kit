@@ -25,8 +25,6 @@ const TopMenuContainer = styled.div`
   justify-content: right;
 `;
 
-const LogoImg = styled.img``;
-
 const containerTopMenuStyle = {
     display: "flex",
     flexGrow: 100,
@@ -36,7 +34,7 @@ const containerTopMenuStyle = {
 
 interface IProps {
     style?: any;
-    logo?: any;
+    logo?: React.ReactNode;
     bar: React.ReactNode; //Render Prop for footer
 }
 
@@ -57,21 +55,16 @@ const TopNavBar: React.FC<IProps> = (props: IProps) => {
 
         <Topbar style={props.style ? props.style : {}}>
             {!isSidebarOpen &&
-                <IconButton onClick={()=> toggleSidebar()}
+                <IconButton onClick={() => toggleSidebar()}
                     style={{ justifySelf: "left", marginLeft: "5px" }}>
                     <RiMenuFill size={24} />
                 </IconButton>
             }
 
+
             <div style={containerTopMenuStyle}>
                 {props.logo && (
-                    <LogoImg style={{ marginRight: "10px" }}
-                        src={props.logo}
-                        onError={({ currentTarget }) => {
-                            currentTarget.onerror = null; // prevents looping
-                            currentTarget.src = "../images/no-image.jpg";
-                        }}
-                        loading="lazy" />
+                    props.logo
                 )}
             </div>
 
