@@ -1,10 +1,8 @@
 # oaky-ui-kit
 
-![oaky-ui-kit-logo.png](oaky-ui-kit-logo.png)
+> ⚠️ **Disclaimer**: This is a learning exercise and proof of concept. Not for production use. [Leer más](#disclaimer)
 
-UI-kit library (React, Typescript app), un sistema de componentes React (react-library), accesible y personalizable que permite a equipos de desarrollo construir aplicaciones web con velocidad y consistencia, manteniendo compatibilidad con las últimas características de React.
 
-UI Kit with react, typescript, styled-components and CSS. This is a React Component Library generated with Vite.
 
 This UI Kit contains the following Components: Alert, AlertPopup, Button, ButtonQuantity, CheckBoxSlide, ModalDialog, CenteringContainer, IconButton, ImgCarousel, LayoutCore, LayoutSensitive, LayoutBullet, ILayoutContext, LayoutContext, LayoutContextProvider, TopNavBar, Link, ListBox, MenuIconButton, MenuList, MenuListFloat, Paper, CircularProgress, SelectList, SplitableContainer, SplitLeft, SplitRight, SplitBar, RadioButtonList, SelectOptions, BulletsStepper, LinksStepper, TextsStepper, SingleAttrTable, TextField, Themes, AcordeonMenuList, AcordeonMenuItem, Tooltip, TableGridSelectable, TableGrid
 
@@ -122,3 +120,14 @@ Release versions in NPM:
 ## Logo and tribute
 
 The name is based on the cartoon character named oaky in tribute to Manuel García Ferré.
+
+## 📌 Disclaimer
+
+> **⚠️ Important Notice**  
+> This library is **purely a learning exercise and a proof of concept**. It is **not intended nor recommended** for use in production environments or real-world projects.
+>
+> Its purpose is to illustrate a possible implementation of Hexagonal Architecture and DDD principles, but it **does not constitute a mature, maintained, or secure solution** for production-grade applications.
+>
+> I encourage you to **take the lessons and patterns** shown here and **apply them directly in your own backend**, building a codebase that is **100% yours, flexible, maintainable, and tailored to your specific needs**. Architecture is not bought on npm; it is designed and cultivated.
+
+---
