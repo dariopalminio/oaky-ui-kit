@@ -1,6 +1,6 @@
 # oaky-ui-kit
 
-> ⚠️ **Disclaimer**: This is a learning exercise and proof of concept. Not for production use. [Leer más](#disclaimer)
+> ⚠️ **Disclaimer**: This is a learning exercise and proof of concept. Not for production use. Read more in Disclaimer
 
 
 
